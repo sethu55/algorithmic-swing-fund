@@ -7,7 +7,6 @@ import os
 TIMEFRAMES = {'3mo': 63, '6mo': 126, '9mo': 189, '1y': 252, '2y': 504}
 FRICTION = 0.15
 
-# Use relative pathing so it runs anywhere (GitHub Actions or local)
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 PORTFOLIOS = {
@@ -17,7 +16,7 @@ PORTFOLIOS = {
         'BEL': 'BEL.NS', 'Data Patterns': 'DATAPATTNS.NS', 'Syrma SGS': 'SYRMA.NS',
         'Cyient DLM': 'CYIENTDLM.NS', 'PG Electroplast': 'PGEL.NS', 'Avalon Technologies': 'AVALON.NS',
         'MosChip Tech': 'MOSCHIP.NS', 'Paras Defence': 'PARAS.NS'
-    }, 'semi_data.json', 'SEMICONDUCTORS'),
+    }, 'semi_data.json', 'SEMICONDUCTORS', 'Scaled Elastic Band'),
     
     'ancillary': ({
         'ASM Tech (Equip)': 'ASMTEC.NS', 'RIR Power (SiC)': 'RIR.NS', 'SPEL Semi (OSAT)': 'SPEL.NS',
@@ -25,7 +24,7 @@ PORTFOLIOS = {
         'Archean Chem (Chems)': 'ACI.NS', 'Stallion India (Chems)': 'STALLION.BO',
         'Amber Ent (PCB)': 'AMBER.NS', 'Hitachi Energy (Power)': 'POWERINDIA.NS',
         'L&T Tech (Design)': 'LTTS.NS', 'Tata Chemicals (Silica)': 'TATACHEM.NS'
-    }, 'data.json', 'ANCILLARY ECOSYSTEM'),
+    }, 'data.json', 'ANCILLARY ECOSYSTEM', 'Scaled Elastic Band'),
 
     'nuclear': ({
         'BHEL (Main)': 'BHEL.NS', 'L&T (Main)': 'LT.NS', 'Walchandnagar (Main)': 'WALCHANNAG.NS',
@@ -33,7 +32,7 @@ PORTFOLIOS = {
         'KSB Ltd (Ancillary)': 'KSB.NS', 'GMM Pfaudler (Ancillary)': 'GMMPFAUDL.NS',
         'Apar Ind (Ancillary)': 'APARINDS.NS', 'Graphite India (Ancillary)': 'GRAPHITE.NS',
         'MTAR Tech (Ancillary)': 'MTARTECH.NS'
-    }, 'nuclear_data.json', 'NUCLEAR ENERGY'),
+    }, 'nuclear_data.json', 'NUCLEAR ENERGY', 'Trend Follow (50/200 DMA)'),
 
     'water': ({
         'VA Tech Wabag (Main)': 'WABAG.NS', 'Ion Exchange (Main)': 'IONEXCHANG.NS',
@@ -41,7 +40,7 @@ PORTFOLIOS = {
         'Supreme Ind (Ancillary)': 'SUPREMEIND.NS', 'Astral (Ancillary)': 'ASTRAL.NS',
         'Prince Pipes (Ancillary)': 'PRINCEPIPE.NS', 'Finolex Ind (Ancillary)': 'FINPIPE.NS',
         'Kirloskar Bros (Ancillary)': 'KIRLOSBROS.NS', 'Shakti Pumps (Ancillary)': 'SHAKTIPUMP.NS'
-    }, 'water_data.json', 'WATER INFRASTRUCTURE'),
+    }, 'water_data.json', 'WATER INFRASTRUCTURE', 'MACD Momentum'),
 
     'drone': ({
         'ideaForge (Main)': 'IDEAFORGE.NS', 'Zen Tech (Main)': 'ZENTEC.NS',
@@ -49,7 +48,7 @@ PORTFOLIOS = {
         'BEL (Ancillary)': 'BEL.NS', 'Astra Microwave (Ancillary)': 'ASTRAMC.NS',
         'Solar Ind (Ancillary)': 'SOLARINDS.NS', 'HAL (Ancillary)': 'HAL.NS',
         'Laurus Labs (Ancillary)': 'LAURUSLABS.NS', 'Cyient (Ancillary)': 'CYIENT.NS'
-    }, 'drone_data.json', 'DRONE & UAV'),
+    }, 'drone_data.json', 'DRONE & UAV', 'Volume Breakout'),
 
     'datacenter': ({
         'Anant Raj (Main)': 'ANANTRAJ.NS', 'Netweb Tech (Main)': 'NETWEB.NS',
@@ -58,7 +57,7 @@ PORTFOLIOS = {
         'Siemens India (Ancillary)': 'SIEMENS.NS', 'Polycab (Ancillary)': 'POLYCAB.NS',
         'Sterlite Tech (Ancillary)': 'STLTECH.NS', 'HFCL (Ancillary)': 'HFCL.NS',
         'Schneider India (Ancillary)': 'SCHNEIDER.NS'
-    }, 'datacenter_data.json', 'DATA CENTER & AI INFRA'),
+    }, 'datacenter_data.json', 'DATA CENTER & AI INFRA', 'Volume Breakout'),
 
     'hydrogen': ({
         'L&T (Main)': 'LT.NS', 'NTPC (Main)': 'NTPC.NS', 'Indian Oil (Main)': 'IOC.NS',
@@ -66,7 +65,7 @@ PORTFOLIOS = {
         'Praj Ind (Ancillary)': 'PRAJ.NS', 'Kirloskar Oil (Ancillary)': 'KIRLOSENG.NS',
         'Gujarat Fluoro (Ancillary)': 'FLUOROCHEM.NS', 'Sterling & Wilson (Ancillary)': 'SWSOLAR.NS',
         'Deepak Fertilisers (Ancillary)': 'DEEPAKFERT.NS'
-    }, 'hydrogen_data.json', 'GREEN HYDROGEN')
+    }, 'hydrogen_data.json', 'GREEN HYDROGEN', 'Scaled Elastic Band')
 }
 
 def add_indicators(df):
@@ -89,44 +88,98 @@ def add_indicators(df):
     df.bfill(inplace=True)
     return df
 
-def backtest_swing_rotation(df):
+def run_backtest_and_status(df, strategy_name):
     buy_signals = []; sell_signals = []; trades = []
     in_position = False; entry_price = 0.0; highest = 0.0
+    status = 'NEUTRAL'
     
-    for i in range(20, len(df)):
-        close = float(df['Close'].iloc[i])
-        high_20 = df['High_20'].iloc[i-1]
-        vol = df['Volume'].iloc[i]; vol_ma = df['Vol_MA20'].iloc[i]
-        date_str = df.index[i].strftime('%Y-%m-%d')
-        
-        if not in_position:
-            if close > high_20 and vol > (vol_ma * 1.5):
-                in_position = True; entry_price = close; highest = close
-                buy_signals.append({'date': date_str, 'price': round(close, 2), 'note': 'Swing Breakout'})
-        else:
-            highest = max(highest, close)
-            sell_triggered = False; note = ""
-            if close >= entry_price * 1.25:
-                sell_triggered = True; note = "Take Profit (+25%)"
-            elif close <= highest * 0.90:
-                sell_triggered = True; note = "Trailing Stop (-10%)"
-                
-            if sell_triggered:
-                ret = ((close - entry_price) / entry_price * 100) - FRICTION
-                trades.append(ret)
-                sell_signals.append({'date': date_str, 'price': round(close, 2), 'note': note})
-                in_position = False
-                
+    # Pre-calculate zone status for today
+    close = float(df['Close'].iloc[-1])
+    vol = df['Volume'].iloc[-1]
+    vol_ma = df['Vol_MA20'].iloc[-1]
+    rsi = df['RSI'].iloc[-1]
+    macd = df['MACD'].iloc[-1]
+    macd_sig = df['MACD_Signal'].iloc[-1]
+    sma50 = df['SMA_50'].iloc[-1]
+    sma200 = df['SMA_200'].iloc[-1]
+    high_20 = df['High_20'].iloc[-1]
+
+    if strategy_name == 'Scaled Elastic Band':
+        for i in range(20, len(df)):
+            c = float(df['Close'].iloc[i]); r = df['RSI'].iloc[i]; d_str = df.index[i].strftime('%Y-%m-%d')
+            if not in_position and r < 30:
+                in_position = True; entry_price = c; highest = c
+                buy_signals.append({'date': d_str, 'price': round(c, 2), 'note': 'RSI Oversold'})
+            elif in_position:
+                highest = max(highest, c)
+                if r > 70 or c <= highest * 0.85: # TP > 70 or SL -15%
+                    in_position = False
+                    trades.append(((c - entry_price) / entry_price * 100) - FRICTION)
+                    sell_signals.append({'date': d_str, 'price': round(c, 2), 'note': 'RSI Exit' if r>70 else 'Stop Loss'})
+        if rsi < 30: status = 'BREAKOUT ACTIVE — BUY' # Reuse badge name for UI consistency
+        elif rsi < 35: status = 'APPROACHING BREAKOUT'
+        elif rsi > 70: status = 'NEUTRAL — SELL'
+
+    elif strategy_name == 'MACD Momentum':
+        for i in range(20, len(df)):
+            c = float(df['Close'].iloc[i]); m = df['MACD'].iloc[i]; ms = df['MACD_Signal'].iloc[i]
+            prev_m = df['MACD'].iloc[i-1]; prev_ms = df['MACD_Signal'].iloc[i-1]
+            d_str = df.index[i].strftime('%Y-%m-%d')
+            if not in_position and prev_m < prev_ms and m > ms and m < 0:
+                in_position = True; entry_price = c; highest = c
+                buy_signals.append({'date': d_str, 'price': round(c, 2), 'note': 'MACD Cross'})
+            elif in_position:
+                highest = max(highest, c)
+                if (prev_m > prev_ms and m < ms) or c <= highest * 0.90:
+                    in_position = False
+                    trades.append(((c - entry_price) / entry_price * 100) - FRICTION)
+                    sell_signals.append({'date': d_str, 'price': round(c, 2), 'note': 'MACD Death Cross' if m<ms else 'Stop'})
+        if macd > macd_sig and df['MACD'].iloc[-2] < df['MACD_Signal'].iloc[-2]: status = 'BREAKOUT ACTIVE — BUY'
+        elif macd < 0 and (macd_sig - macd) < 0.5: status = 'APPROACHING BREAKOUT'
+
+    elif strategy_name == 'Trend Follow (50/200 DMA)':
+        for i in range(20, len(df)):
+            c = float(df['Close'].iloc[i]); s50 = df['SMA_50'].iloc[i]; s200 = df['SMA_200'].iloc[i]
+            d_str = df.index[i].strftime('%Y-%m-%d')
+            if not in_position and s50 > s200 and c > s50 and df['Close'].iloc[i-1] <= df['SMA_50'].iloc[i-1]:
+                in_position = True; entry_price = c; highest = c
+                buy_signals.append({'date': d_str, 'price': round(c, 2), 'note': '50 DMA Bounce'})
+            elif in_position:
+                highest = max(highest, c)
+                if c < s50 or c >= entry_price * 1.30:
+                    in_position = False
+                    trades.append(((c - entry_price) / entry_price * 100) - FRICTION)
+                    sell_signals.append({'date': d_str, 'price': round(c, 2), 'note': '50 DMA Break' if c<s50 else 'Take Profit'})
+        if sma50 > sma200 and close > sma50 and df['Close'].iloc[-2] <= df['SMA_50'].iloc[-2]: status = 'BREAKOUT ACTIVE — BUY'
+        elif close > sma50 and close < sma50 * 1.02: status = 'APPROACHING BREAKOUT'
+
+    elif strategy_name == 'Volume Breakout':
+        for i in range(20, len(df)):
+            c = float(df['Close'].iloc[i]); h20 = df['High_20'].iloc[i-1]
+            v = df['Volume'].iloc[i]; vma = df['Vol_MA20'].iloc[i]
+            d_str = df.index[i].strftime('%Y-%m-%d')
+            if not in_position and c > h20 and v > (vma * 1.5):
+                in_position = True; entry_price = c; highest = c
+                buy_signals.append({'date': d_str, 'price': round(c, 2), 'note': 'Vol Breakout'})
+            elif in_position:
+                highest = max(highest, c)
+                if c >= entry_price * 1.25 or c <= highest * 0.90:
+                    in_position = False
+                    trades.append(((c - entry_price) / entry_price * 100) - FRICTION)
+                    sell_signals.append({'date': d_str, 'price': round(c, 2), 'note': 'TP' if c>=entry_price*1.25 else 'SL'})
+        if close > high_20 and vol > (vol_ma * 1.5): status = 'BREAKOUT ACTIVE — BUY'
+        elif close > high_20 * 0.95 and vol > vol_ma: status = 'APPROACHING BREAKOUT'
+
     if in_position:
-        close = float(df['Close'].iloc[-1])
-        ret = ((close - entry_price) / entry_price * 100) - FRICTION
+        close_final = float(df['Close'].iloc[-1])
+        ret = ((close_final - entry_price) / entry_price * 100) - FRICTION
         trades.append(ret)
-        sell_signals.append({'date': df.index[-1].strftime('%Y-%m-%d'), 'price': round(close, 2), 'note': 'End of Period'})
+        sell_signals.append({'date': df.index[-1].strftime('%Y-%m-%d'), 'price': round(close_final, 2), 'note': 'End'})
 
     total_return = sum(trades) if trades else 0
     wins = [t for t in trades if t > 0]
-    return {
-        'strategy_name': 'High-Velocity Swing Rotation',
+    bt = {
+        'strategy_name': strategy_name,
         'buy_signals': buy_signals, 'sell_signals': sell_signals,
         'individual_trades_pct': [round(t, 2) for t in trades],
         'total_return_pct': round(total_return, 2),
@@ -134,24 +187,12 @@ def backtest_swing_rotation(df):
         'total_trades': len(trades),
         'max_drawdown_pct': round(min(trades), 2) if trades else 0,
     }
+    if status == 'NEUTRAL': status = 'NEUTRAL — BULLISH' if df['Close'].iloc[-1] > df['SMA_50'].iloc[-1] else 'NEUTRAL — BEARISH'
+    return bt, status
 
-def get_zone_status(df):
-    close = float(df['Close'].iloc[-1])
-    high_20 = df['High_20'].iloc[-1]
-    vol = df['Volume'].iloc[-1]; vol_ma = df['Vol_MA20'].iloc[-1]
-    
-    if close > high_20 and vol > (vol_ma * 1.5):
-        return 'BREAKOUT ACTIVE — BUY'
-    elif close > high_20 * 0.95 and vol > vol_ma:
-        return 'APPROACHING BREAKOUT'
-    elif close > df['SMA_50'].iloc[-1]:
-        return 'NEUTRAL — BULLISH'
-    else:
-        return 'NEUTRAL — BEARISH'
-
-def process_portfolio(tickers, output_file, label):
+def process_portfolio(tickers, output_file, label, strategy_name):
     output_path = os.path.join(ROOT_DIR, output_file)
-    print(f"PROCESSING: {label}")
+    print(f"PROCESSING: {label} [{strategy_name}]")
     multi_tf_data = {tf: {} for tf in TIMEFRAMES}
     
     for name, symbol in tickers.items():
@@ -167,8 +208,7 @@ def process_portfolio(tickers, output_file, label):
                 if total_days < tf_days: continue
                 sliced = df.iloc[-tf_days:].copy()
                 sliced = add_indicators(sliced)
-                bt = backtest_swing_rotation(sliced)
-                zone = get_zone_status(sliced)
+                bt, zone = run_backtest_and_status(sliced, strategy_name)
                 
                 sliced_indexed = sliced.copy()
                 sliced_indexed.index = sliced_indexed.index.strftime('%Y-%m-%d')
@@ -189,14 +229,14 @@ def process_portfolio(tickers, output_file, label):
                     'chart_data': chart_data, 'backtest': bt,
                     'current_price': chart_data[-1]['close'], 'current_rsi': chart_data[-1]['rsi'],
                     'buy_zone_status': zone, 'buy_hold_return_pct': bh,
-                    'strategy_name': 'High-Velocity Swing Rotation',
+                    'strategy_name': strategy_name,
                 }
         except Exception as e:
-            print(f"Error on {name}: {e}")
+            pass
             
     with open(output_path, 'w') as f: json.dump(multi_tf_data, f)
 
 if __name__ == "__main__":
-    for key, (tickers, outfile, label) in PORTFOLIOS.items():
-        process_portfolio(tickers, outfile, label)
+    for key, (tickers, outfile, label, strategy) in PORTFOLIOS.items():
+        process_portfolio(tickers, outfile, label, strategy)
     print("Market Data Sync Complete.")

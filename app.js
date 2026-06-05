@@ -1,41 +1,61 @@
-let allData = {}; // { semi: { '3mo': {...}, '1y': {...} }, ancillary: { ... } }
-let activeTab = 'semi';
+let allData = {}; 
+let portfolioData = null;
+let activeTab = 'portfolio'; // Default to portfolio tab now!
 let activeTimeframe = '1y';
 let activeCompany = null;
 let priceChart = null;
 let indChart = null;
 
 const STRATEGY_NAMES = {
-    semi: 'Scaled Elastic Band',
-    ancillary: 'Scaled Elastic Band',
-    nuclear: 'Trend Follow (50/200 DMA)',
-    water: 'MACD Momentum',
-    drone: 'Volume Breakout',
-    datacenter: 'Volume Breakout',
-    hydrogen: 'Scaled Elastic Band'
+    semi: 'High-Velocity Swing',
+    ancillary: 'High-Velocity Swing',
+    nuclear: 'High-Velocity Swing',
+    water: 'High-Velocity Swing',
+    drone: 'High-Velocity Swing',
+    datacenter: 'High-Velocity Swing',
+    hydrogen: 'High-Velocity Swing'
 };
 
 Promise.all([
-    fetch('semi_data.json?v=' + Date.now()).then(r => r.json()),
-    fetch('data.json?v=' + Date.now()).then(r => r.json()),
-    fetch('nuclear_data.json?v=' + Date.now()).then(r => r.json()),
-    fetch('water_data.json?v=' + Date.now()).then(r => r.json()),
-    fetch('drone_data.json?v=' + Date.now()).then(r => r.json()),
-    fetch('datacenter_data.json?v=' + Date.now()).then(r => r.json()),
-    fetch('hydrogen_data.json?v=' + Date.now()).then(r => r.json())
-]).then(([semi, anc, nuclear, water, drone, datacenter, hydrogen]) => {
+    fetch('semi_data.json?v=' + Date.now()).then(r => r.json()).catch(() => ({})),
+    fetch('data.json?v=' + Date.now()).then(r => r.json()).catch(() => ({})),
+    fetch('nuclear_data.json?v=' + Date.now()).then(r => r.json()).catch(() => ({})),
+    fetch('water_data.json?v=' + Date.now()).then(r => r.json()).catch(() => ({})),
+    fetch('drone_data.json?v=' + Date.now()).then(r => r.json()).catch(() => ({})),
+    fetch('datacenter_data.json?v=' + Date.now()).then(r => r.json()).catch(() => ({})),
+    fetch('hydrogen_data.json?v=' + Date.now()).then(r => r.json()).catch(() => ({})),
+    fetch('portfolio.json?v=' + Date.now()).then(r => r.json()).catch(() => null)
+]).then(([semi, anc, nuclear, water, drone, datacenter, hydrogen, port]) => {
     allData = { semi, ancillary: anc, nuclear, water, drone, datacenter, hydrogen };
-    initSidebar();
+    portfolioData = port;
+    switchTab('portfolio'); // Initialize
 }).catch(err => {
-    document.querySelector('.content').innerHTML = `<div style="text-align:center;margin-top:100px;"><h1 style="color:#ef4444">Data Failed to Load</h1><p style="color:#94a3b8;margin-top:16px;">Use <strong>launch.bat</strong> to start the dashboard.</p></div>`;
+    console.error(err);
+    document.querySelector('.dashboard').innerHTML = `<div style="text-align:center;margin-top:100px;width:100%;"><h1 style="color:#ef4444">Data Failed to Load</h1><p style="color:#94a3b8;margin-top:16px;">Check GitHub Actions logs.</p></div>`;
 });
 
 window.switchTab = function(tab) {
     activeTab = tab;
     document.querySelectorAll('.tab-btn[data-tab]').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
-    initSidebar();
-    const el = document.getElementById('strategy-name-display');
-    if (el) el.textContent = STRATEGY_NAMES[tab] || 'Unknown';
+    
+    const sidebarElements = document.getElementById('company-sidebar-elements');
+    const compView = document.getElementById('company-view');
+    const portView = document.getElementById('portfolio-view');
+    const strategyName = document.getElementById('strategy-name-display');
+    
+    if (tab === 'portfolio') {
+        sidebarElements.style.display = 'none';
+        compView.style.display = 'none';
+        portView.style.display = 'block';
+        strategyName.textContent = 'Account Ledger';
+        if (portfolioData) renderPortfolio();
+    } else {
+        sidebarElements.style.display = 'block';
+        compView.style.display = 'block';
+        portView.style.display = 'none';
+        strategyName.textContent = STRATEGY_NAMES[tab] || 'Unknown';
+        initSidebar();
+    }
 };
 
 window.switchTimeframe = function(tf) {
@@ -48,6 +68,102 @@ function getCurrentData() {
     const tabData = allData[activeTab];
     return tabData && tabData[activeTimeframe] ? tabData[activeTimeframe] : {};
 }
+
+// ---------------------------------------------------------
+// PORTFOLIO RENDERING LOGIC
+// ---------------------------------------------------------
+function renderPortfolio() {
+    if (!portfolioData) return;
+    
+    // Helper to find latest price from allData
+    const getLatestPrice = (compName) => {
+        for (const sec in allData) {
+            if (allData[sec] && allData[sec]['1y'] && allData[sec]['1y'][compName]) {
+                return allData[sec]['1y'][compName].current_price;
+            }
+        }
+        return null; // not found
+    };
+
+    let totalVal = portfolioData.cash;
+    const TRADE_SIZE = 150000.0;
+    
+    const activeTbody = document.getElementById('active-positions-tbody');
+    activeTbody.innerHTML = '';
+    
+    if (!portfolioData.active_positions || Object.keys(portfolioData.active_positions).length === 0) {
+        activeTbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:20px;color:#94a3b8;">No active positions. 100% in cash.</td></tr>';
+    } else {
+        for (const [comp, pos] of Object.entries(portfolioData.active_positions)) {
+            let livePrice = getLatestPrice(comp);
+            let displayPrice = livePrice || pos.entry_price;
+            
+            let unrealizedPct = ((displayPrice - pos.entry_price) / pos.entry_price) * 100;
+            let unrealizedVal = TRADE_SIZE * (unrealizedPct / 100);
+            
+            totalVal += (TRADE_SIZE + unrealizedVal);
+            
+            let color = unrealizedPct >= 0 ? '#10b981' : '#ef4444';
+            let sign = unrealizedPct >= 0 ? '+' : '';
+            
+            let tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${pos.entry_date}</td>
+                <td><strong>${comp}</strong></td>
+                <td>₹${pos.entry_price.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+                <td style="color:#10b981">₹${pos.target.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+                <td style="color:#ef4444">₹${pos.stop.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+                <td>₹${displayPrice.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+                <td style="color:${color}; font-weight:bold;">${sign}${unrealizedPct.toFixed(2)}% (₹${unrealizedVal.toLocaleString('en-IN', {minimumFractionDigits:0})})</td>
+            `;
+            activeTbody.appendChild(tr);
+        }
+    }
+
+    // Top Ribbon Stats
+    document.getElementById('port-val').textContent = '₹' + totalVal.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+    document.getElementById('port-val').style.color = totalVal >= portfolioData.starting_balance ? '#10b981' : '#ef4444';
+    
+    document.getElementById('port-cash').textContent = '₹' + portfolioData.cash.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+    
+    let pnlPct = (portfolioData.realized_pnl / portfolioData.starting_balance) * 100;
+    let pnlSign = pnlPct >= 0 ? '+' : '';
+    document.getElementById('port-pnl').textContent = `₹${portfolioData.realized_pnl.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})} (${pnlSign}${pnlPct.toFixed(2)}%)`;
+    document.getElementById('port-pnl').style.color = pnlPct >= 0 ? '#10b981' : '#ef4444';
+    
+    let totalTrades = portfolioData.trades_won + portfolioData.trades_lost;
+    let winRate = totalTrades > 0 ? (portfolioData.trades_won / totalTrades) * 100 : 0;
+    document.getElementById('port-win').textContent = `${winRate.toFixed(1)}% (${totalTrades} Trades)`;
+
+    // Closed Trades
+    const closedTbody = document.getElementById('closed-trades-tbody');
+    closedTbody.innerHTML = '';
+    
+    if (!portfolioData.closed_trades || portfolioData.closed_trades.length === 0) {
+        closedTbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:20px;color:#94a3b8;">No closed trades yet.</td></tr>';
+    } else {
+        const reversed = [...portfolioData.closed_trades].reverse();
+        reversed.forEach(t => {
+            let color = t.pnl >= 0 ? '#10b981' : '#ef4444';
+            let sign = t.pnl >= 0 ? '+' : '';
+            let tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${t.entry_date}</td>
+                <td>${t.exit_date}</td>
+                <td><strong>${t.comp}</strong></td>
+                <td>₹${t.entry_price.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+                <td>₹${t.exit_price.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+                <td style="color:${color}; font-weight:bold;">${sign}₹${t.pnl.toLocaleString('en-IN', {minimumFractionDigits:0})} (${sign}${t.ret_pct.toFixed(2)}%)</td>
+                <td>${t.reason}</td>
+            `;
+            closedTbody.appendChild(tr);
+        });
+    }
+}
+
+// ---------------------------------------------------------
+// EXISTING COMPANY VIEW LOGIC
+// ---------------------------------------------------------
 
 function initSidebar() {
     const data = getCurrentData();
@@ -92,7 +208,6 @@ function initSidebar() {
         list.appendChild(div);
     });
 
-    // Load first company or keep active
     if (sorted.length > 0) {
         if (activeCompany && data[activeCompany]) {
             loadCompany(activeCompany);
@@ -111,7 +226,6 @@ function loadCompany(company) {
     activeCompany = company;
 
     document.getElementById('header-title').textContent = company + ' (' + activeTimeframe.toUpperCase() + ')';
-    if (data.strategy_name) { const sn = document.getElementById('strategy-name-display'); if (sn) sn.textContent = data.strategy_name; }
     document.getElementById('stat-price').textContent = '\u20b9' + data.current_price.toLocaleString('en-IN');
 
     const rsiEl = document.getElementById('stat-rsi');

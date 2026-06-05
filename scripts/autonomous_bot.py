@@ -5,6 +5,7 @@ from datetime import datetime
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PORTFOLIO_FILE = os.path.join(ROOT_DIR, 'portfolio.json')
 LEDGER_FILE = os.path.join(ROOT_DIR, 'paper_trades.md')
+FUNDAMENTALS_FILE = os.path.join(ROOT_DIR, 'fundamentals.json')
 
 SECTORS = {
     'Nuclear': 'nuclear_data.json',
@@ -18,23 +19,15 @@ SECTORS = {
 
 TRADE_SIZE = 150000.0
 
-def load_portfolio():
-    if os.path.exists(PORTFOLIO_FILE):
-        with open(PORTFOLIO_FILE, 'r') as f:
+def load_json(path, default):
+    if os.path.exists(path):
+        with open(path, 'r') as f:
             return json.load(f)
-    return {
-        'starting_balance': 1000000.0,
-        'cash': 1000000.0,
-        'realized_pnl': 0.0,
-        'trades_won': 0,
-        'trades_lost': 0,
-        'active_positions': {}, 
-        'closed_trades': []
-    }
+    return default
 
-def save_portfolio(pf):
-    with open(PORTFOLIO_FILE, 'w') as f:
-        json.dump(pf, f, indent=4)
+def save_json(path, data):
+    with open(path, 'w') as f:
+        json.dump(data, f, indent=4)
 
 def load_market_data():
     market = {}
@@ -103,8 +96,14 @@ def render_ledger(pf, market_data):
         f.write("\n".join(md))
 
 def run_bot():
-    pf = load_portfolio()
+    default_pf = {
+        'starting_balance': 1000000.0, 'cash': 1000000.0, 'realized_pnl': 0.0,
+        'trades_won': 0, 'trades_lost': 0, 'active_positions': {}, 'closed_trades': []
+    }
+    pf = load_json(PORTFOLIO_FILE, default_pf)
     market = load_market_data()
+    fundamentals = load_json(FUNDAMENTALS_FILE, {})
+    
     today = datetime.now().strftime('%Y-%m-%d %H:%M')
     
     to_close = []
@@ -142,18 +141,22 @@ def run_bot():
         status = d['buy_zone_status']
         if 'BREAKOUT ACTIVE' in status or 'BUY' in status:
             if comp not in pf['active_positions'] and pf['cash'] >= TRADE_SIZE and len(pf['active_positions']) < 6:
-                curr_p = d['current_price']
-                pf['cash'] -= TRADE_SIZE
-                pf['active_positions'][comp] = {
-                    'entry_date': today,
-                    'entry_price': curr_p,
-                    'highest': curr_p,
-                    'target': curr_p * 1.25,
-                    'stop': curr_p * 0.90
-                }
-                print(f"BOUGHT: {comp} at {curr_p}")
+                fund_score = fundamentals.get(comp, 0)
+                if fund_score >= 50:
+                    curr_p = d['current_price']
+                    pf['cash'] -= TRADE_SIZE
+                    pf['active_positions'][comp] = {
+                        'entry_date': today,
+                        'entry_price': curr_p,
+                        'highest': curr_p,
+                        'target': curr_p * 1.25,
+                        'stop': curr_p * 0.90
+                    }
+                    print(f"BOUGHT: {comp} at {curr_p} (Score: {fund_score})")
+                else:
+                    print(f"REJECTED: {comp} triggered technical signal but failed fundamental guardrail (Score: {fund_score})")
 
-    save_portfolio(pf)
+    save_json(PORTFOLIO_FILE, pf)
     render_ledger(pf, market)
     print("Bot execution complete.")
 
