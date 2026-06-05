@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semiconductor Backtester | Scaled Elastic Band</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Backtester</h2>
+                <p id="strategy-name-display">Scaled Elastic Band</p>
+            </div>
+            <div class="tab-switcher" id="tab-switcher" style="flex-wrap: wrap; gap: 4px;">
+                <button class="tab-btn active" data-tab="semi" onclick="switchTab('semi')" style="flex: 1 1 30%;">Semi</button>
+                <button class="tab-btn" data-tab="ancillary" onclick="switchTab('ancillary')" style="flex: 1 1 45%;">Semi Ancillary</button>
+                <button class="tab-btn" data-tab="nuclear" onclick="switchTab('nuclear')" style="flex: 1 1 30%;">Nuclear</button>
+                <button class="tab-btn" data-tab="water" onclick="switchTab('water')" style="flex: 1 1 30%;">Water</button>
+                <button class="tab-btn" data-tab="drone" onclick="switchTab('drone')" style="flex: 1 1 30%;">Drone</button>
+                <button class="tab-btn" data-tab="datacenter" onclick="switchTab('datacenter')" style="flex: 1 1 45%;">Data Center</button>
+                <button class="tab-btn" data-tab="hydrogen" onclick="switchTab('hydrogen')" style="flex: 1 1 45%;">Hydrogen</button>
+            </div>
+            <div class="timeframe-selector">
+                <label>Timeframe</label>
+                <div class="tf-buttons" id="tf-buttons">
+                    <button class="tf-btn" data-tf="3mo" onclick="switchTimeframe('3mo')">3M</button>
+                    <button class="tf-btn" data-tf="6mo" onclick="switchTimeframe('6mo')">6M</button>
+                    <button class="tf-btn" data-tf="9mo" onclick="switchTimeframe('9mo')">9M</button>
+                    <button class="tf-btn active" data-tf="1y" onclick="switchTimeframe('1y')">1Y</button>
+                    <button class="tf-btn" data-tf="2y" onclick="switchTimeframe('2y')">2Y</button>
+                </div>
+            </div>
+            <div class="tab-aggregate" id="tab-aggregate"></div>
+            <div class="legend">
+                <div><span class="dot dot-buy"></span> Buy Signal (RSI &lt; 30)</div>
+                <div><span class="dot dot-approach"></span> Approaching (30-35)</div>
+                <div><span class="dot dot-near"></span> Near Zone (35-40)</div>
+                <div><span class="dot dot-neutral"></span> Neutral</div>
+                <div><span class="dot dot-sell"></span> Sell Signal (RSI &gt; 70)</div>
+            </div>
+            <div class="company-list" id="company-list"></div>
+        </aside>
+
+        <main class="content">
+            <header>
+                <h1 id="header-title">Select a Company</h1>
+                <div class="stats-ribbon">
+                    <div class="stat-box"><span>Price</span><strong id="stat-price">-</strong></div>
+                    <div class="stat-box"><span>RSI (14)</span><strong id="stat-rsi">-</strong></div>
+                    <div class="stat-box"><span>Buy &amp; Hold</span><strong id="stat-bh">-</strong></div>
+                    <div class="stat-box zone-box"><span>Signal</span><strong id="stat-zone" class="zone-badge">-</strong></div>
+                </div>
+            </header>
+
+            <div class="charts-container">
+                <div class="chart-card main-chart">
+                    <h3>Price Action &mdash; Scale-In Buy &amp; Sell Points</h3>
+                    <div class="canvas-wrapper"><canvas id="priceChart"></canvas></div>
+                </div>
+                <div class="chart-card indicator-chart">
+                    <h3>RSI (14) with Buy (30/40) &amp; Sell (70) Zones &bull; MACD</h3>
+                    <div class="canvas-wrapper"><canvas id="indicatorChart"></canvas></div>
+                </div>
+            </div>
+
+            <div class="backtest-panel">
+                <h3>Backtest: Scaled Elastic Band</h3>
+                <p class="logic-text"><strong>Logic:</strong> Scale into oversold pullbacks in 3 tranches (RSI &lt; 40, &lt; 35, &lt; 30). Take profit at RSI &gt; 70. Hard 15% stop loss. 0.15% friction per trade.</p>
+                <div class="results-grid">
+                    <div class="result-card"><span>Strategy Return</span><h2 id="bt-return">-</h2></div>
+                    <div class="result-card"><span>Win Rate</span><h2 id="bt-winrate">-</h2></div>
+                    <div class="result-card"><span>Trades</span><h2 id="bt-trades">-</h2></div>
+                    <div class="result-card"><span>Alpha vs B&amp;H</span><h2 id="bt-alpha">-</h2></div>
+                </div>
+                <div class="trade-log">
+                    <h4>Simulated Trade Log</h4>
+                    <table><thead><tr><th>Type</th><th>Date</th><th>Price</th><th>P&amp;L</th></tr></thead>
+                    <tbody id="trade-tbody"></tbody></table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js?v=3"></script>
+</body>
+</html>
