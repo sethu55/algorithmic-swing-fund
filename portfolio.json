@@ -1,9 +1,24 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 1000000.0,
+    "cash": 700000.0,
     "realized_pnl": 0.0,
     "trades_won": 0,
     "trades_lost": 0,
-    "active_positions": {},
+    "active_positions": {
+        "Kirloskar Bros (Ancillary)": {
+            "entry_date": "2026-06-06 18:20",
+            "entry_price": 1711.1,
+            "highest": 1711.1,
+            "target": 2138.875,
+            "stop": 1539.99
+        },
+        "NTPC (Main)": {
+            "entry_date": "2026-06-06 18:20",
+            "entry_price": 361.65,
+            "highest": 361.65,
+            "target": 452.0625,
+            "stop": 325.485
+        }
+    },
     "closed_trades": []
 }
