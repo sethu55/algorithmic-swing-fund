@@ -3,6 +3,9 @@ import pandas as pd
 import numpy as np
 import json
 import os
+import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 TIMEFRAMES = {'3mo': 63, '6mo': 126, '9mo': 189, '1y': 252, '2y': 504}
 FRICTION = 0.15
@@ -93,7 +96,6 @@ def run_backtest_and_status(df, strategy_name):
     in_position = False; entry_price = 0.0; highest = 0.0
     status = 'NEUTRAL'
     
-    # Pre-calculate zone status for today
     close = float(df['Close'].iloc[-1])
     vol = df['Volume'].iloc[-1]
     vol_ma = df['Vol_MA20'].iloc[-1]
@@ -112,11 +114,11 @@ def run_backtest_and_status(df, strategy_name):
                 buy_signals.append({'date': d_str, 'price': round(c, 2), 'note': 'RSI Oversold'})
             elif in_position:
                 highest = max(highest, c)
-                if r > 70 or c <= highest * 0.85: # TP > 70 or SL -15%
+                if r > 70 or c <= highest * 0.85:
                     in_position = False
                     trades.append(((c - entry_price) / entry_price * 100) - FRICTION)
                     sell_signals.append({'date': d_str, 'price': round(c, 2), 'note': 'RSI Exit' if r>70 else 'Stop Loss'})
-        if rsi < 30: status = 'BREAKOUT ACTIVE — BUY' # Reuse badge name for UI consistency
+        if rsi < 30: status = 'BREAKOUT ACTIVE — BUY'
         elif rsi < 35: status = 'APPROACHING BREAKOUT'
         elif rsi > 70: status = 'NEUTRAL — SELL'
 
@@ -190,19 +192,42 @@ def run_backtest_and_status(df, strategy_name):
     if status == 'NEUTRAL': status = 'NEUTRAL — BULLISH' if df['Close'].iloc[-1] > df['SMA_50'].iloc[-1] else 'NEUTRAL — BEARISH'
     return bt, status
 
+def get_yfinance_session():
+    session = requests.Session()
+    retry = Retry(connect=3, backoff_factor=0.5)
+    adapter = HTTPAdapter(max_retries=retry)
+    session.mount('http://', adapter)
+    session.mount('https://', adapter)
+    session.headers.update({
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    })
+    return session
+
 def process_portfolio(tickers, output_file, label, strategy_name):
     output_path = os.path.join(ROOT_DIR, output_file)
     print(f"PROCESSING: {label} [{strategy_name}]")
     multi_tf_data = {tf: {} for tf in TIMEFRAMES}
     
+    session = get_yfinance_session()
+    successful_downloads = 0
+    
     for name, symbol in tickers.items():
         try:
-            df = yf.download(symbol, period='2y', progress=False)
-            if df.empty: df = yf.download(symbol.replace('.NS', '.BO'), period='2y', progress=False)
-            if df.empty: continue
-            if isinstance(df.columns, pd.MultiIndex): df.columns = df.columns.get_level_values(0)
+            df = yf.download(symbol, period='2y', progress=False, session=session)
+            if df.empty: 
+                df = yf.download(symbol.replace('.NS', '.BO'), period='2y', progress=False, session=session)
+            if df.empty: 
+                print(f"Failed to fetch data for {symbol}")
+                continue
+                
+            if isinstance(df.columns, pd.MultiIndex): 
+                df.columns = df.columns.get_level_values(0)
             df.dropna(inplace=True)
             total_days = len(df)
+            if total_days < 50:
+                continue
+                
+            successful_downloads += 1
             
             for tf_name, tf_days in TIMEFRAMES.items():
                 if total_days < tf_days: continue
@@ -232,9 +257,16 @@ def process_portfolio(tickers, output_file, label, strategy_name):
                     'strategy_name': strategy_name,
                 }
         except Exception as e:
+            print(f"Error processing {symbol}: {e}")
             pass
             
-    with open(output_path, 'w') as f: json.dump(multi_tf_data, f)
+    # CRITICAL: Prevent writing empty JSON files if yfinance gets blocked
+    if successful_downloads == 0:
+        raise Exception(f"CRITICAL ERROR: Failed to download any data for {label}. Yfinance may be blocking the IP. Aborting to protect JSON file integrity.")
+        
+    with open(output_path, 'w') as f: 
+        json.dump(multi_tf_data, f)
+    print(f"Successfully wrote {output_path}")
 
 if __name__ == "__main__":
     for key, (tickers, outfile, label, strategy) in PORTFOLIOS.items():
