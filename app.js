@@ -100,8 +100,8 @@ function renderPortfolio() {
             
             let posSize = pos.position_size || 1.0;
             let sizeLabel = posSize === 1.0 ? "Full" : "Runner (50%)";
-            let shares = pos.shares || 0;
-            let capital = pos.capital_deployed || (pos.shares * pos.entry_price);
+            let shares = pos.shares || Math.floor(150000.0 / pos.entry_price);
+            let capital = pos.capital_deployed || (shares * pos.entry_price);
             
             let targetLabel = posSize === 1.0 ? `₹${pos.target.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}` : "Trailing Infinite";
             
