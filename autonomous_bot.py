@@ -1,5 +1,6 @@
 import os
 import json
+import math
 from datetime import datetime
 
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -17,7 +18,8 @@ SECTORS = {
     'Ancillary': 'data.json'
 }
 
-TRADE_SIZE = 150000.0
+RISK_PERCENT = 0.02  # Risk exactly 2% of Total Portfolio Value per trade
+STOP_LOSS_PCT = 0.10 # 10% Initial Stop Loss
 
 def load_json(path, default):
     if os.path.exists(path):
@@ -41,12 +43,22 @@ def load_market_data():
                         market[comp] = d
     return market
 
+def calculate_portfolio_value(pf, market_data):
+    val = pf['cash']
+    for comp, pos in pf['active_positions'].items():
+        if comp in market_data:
+            val += pos.get('shares', 0) * market_data[comp]['current_price']
+        else:
+            val += pos.get('capital_deployed', 0)
+    return val
+
 def render_ledger(pf, market_data):
     md = [
         "# High-Velocity Swing: Paper Trading Ledger",
         "> [!IMPORTANT]",
         "> **Portfolio Objective:** Outperform passive Buy & Hold through aggressive Capital Rotation.",
         "> **Exit Strategy:** Scale-out 50% at +25% Target. Trail the remaining 50% with a 10% dynamic stop.",
+        "> **Position Sizing:** Institutional Risk Parity (Risk exactly 2% of Total Portfolio Value per trade).",
         "",
         "## Account Overview",
         "| Metric | Value |",
@@ -54,12 +66,7 @@ def render_ledger(pf, market_data):
         f"| **Starting Balance** | INR {pf['starting_balance']:,.2f} |"
     ]
     
-    current_value = pf['cash']
-    for comp, pos in pf['active_positions'].items():
-        if comp in market_data:
-            current_value += (TRADE_SIZE * pos.get('position_size', 1.0) / pos['entry_price']) * market_data[comp]['current_price']
-        else:
-            current_value += (TRADE_SIZE * pos.get('position_size', 1.0))
+    current_value = calculate_portfolio_value(pf, market_data)
             
     md.append(f"| **Current Portfolio Value** | **INR {current_value:,.2f}** |")
     md.append(f"| **Available Cash** | INR {pf['cash']:,.2f} |")
@@ -76,24 +83,28 @@ def render_ledger(pf, market_data):
     if not pf['active_positions']:
         md.append("*Currently holding 100% Cash. Waiting for algorithmic triggers.*")
     else:
-        md.append("| Date | Company | Size | Entry Price | Target (+25%) | Trailing Stop (-10%) | Current Price | Unrealized P&L |")
+        md.append("| Date | Company | Shares | Entry Price | Target (+25%) | Trailing Stop (-10%) | Current Price | Unrealized P&L |")
         md.append("| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |")
         for comp, pos in pf['active_positions'].items():
             curr_p = market_data[comp]['current_price'] if comp in market_data else pos['entry_price']
-            unrealized = ((curr_p - pos['entry_price']) / pos['entry_price']) * 100
-            size_label = "Full (100%)" if pos.get('position_size', 1.0) == 1.0 else "Runner (50%)"
+            unrealized_val = (curr_p - pos['entry_price']) * pos.get('shares', 0)
+            unrealized_pct = (curr_p - pos['entry_price']) / pos['entry_price'] * 100
+            
+            size_label = "Full" if pos.get('position_size', 1.0) == 1.0 else "Runner"
+            shares_str = f"{pos.get('shares', 0)} ({size_label})"
             target_str = f"INR {pos['target']:.2f}" if pos.get('position_size', 1.0) == 1.0 else "Infinite (Trailing)"
-            md.append(f"| {pos['entry_date']} | **{comp}** | {size_label} | INR {pos['entry_price']:.2f} | {target_str} | INR {pos['stop']:.2f} | INR {curr_p:.2f} | {unrealized:.2f}% |")
+            
+            md.append(f"| {pos['entry_date']} | **{comp}** | {shares_str} | INR {pos['entry_price']:.2f} | {target_str} | INR {pos['stop']:.2f} | INR {curr_p:.2f} | {unrealized_pct:.2f}% (INR {unrealized_val:,.2f}) |")
             
     md.append("")
     md.append("## Closed Trade History")
     if not pf['closed_trades']:
         md.append("*No closed trades yet.*")
     else:
-        md.append("| Entry | Exit | Company | Entry Price | Exit Price | Return % | Realized P&L | Reason |")
+        md.append("| Entry | Exit | Company | Entry Price | Exit Price | Shares Sold | Realized P&L | Reason |")
         md.append("| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |")
-        for t in reversed(pf['closed_trades'][-10:]): 
-            md.append(f"| {t['entry_date']} | {t['exit_date']} | **{t['comp']}** | INR {t['entry_price']:.2f} | INR {t['exit_price']:.2f} | {t['ret_pct']:.2f}% | INR {t['pnl']:,.2f} | {t['reason']} |")
+        for t in reversed(pf['closed_trades'][-15:]): 
+            md.append(f"| {t['entry_date']} | {t['exit_date']} | **{t['comp']}** | INR {t['entry_price']:.2f} | INR {t['exit_price']:.2f} | {t.get('shares_sold', 0)} | INR {t['pnl']:,.2f} | {t['reason']} |")
             
     with open(LEDGER_FILE, 'w', encoding='utf-8') as f:
         f.write("\n".join(md))
@@ -111,44 +122,45 @@ def run_bot():
     
     to_close = []
     for comp, pos in pf['active_positions'].items():
-        if 'position_size' not in pos:
-            pos['position_size'] = 1.0
+        if 'shares' not in pos:
+            # Backwards compatibility fix
+            pos['shares'] = math.floor(150000.0 / pos['entry_price'])
+            pos['capital_deployed'] = pos['shares'] * pos['entry_price']
             
         if comp not in market: continue
         curr_p = market[comp]['current_price']
         
         if curr_p > pos['highest']:
             pos['highest'] = curr_p
-            # Always trail 10% from highest peak
             pos['stop'] = max(pos['stop'], curr_p * 0.90)
             
         reason = None
         scale_out = False
         
-        # Check Initial +25% Target (Only if we still have a full position)
         if pos['position_size'] == 1.0 and curr_p >= pos['target']:
             scale_out = True
             reason = "Scale-Out (+25%)"
-        # Check Stop Loss
         elif curr_p <= pos['stop']:
             reason = "Stop Loss" if pos['position_size'] == 1.0 else "Trailing Stop (Runner Exit)"
             
         if reason:
-            size_to_close = 0.5 if scale_out else pos['position_size']
-            ret_pct = ((curr_p - pos['entry_price']) / pos['entry_price']) * 100 - 0.15 
-            pnl = TRADE_SIZE * size_to_close * (ret_pct / 100)
+            shares_to_sell = math.floor(pos['shares'] / 2) if scale_out else pos['shares']
+            # Friction = 0.15% per trade round trip
+            gross_pnl = (curr_p - pos['entry_price']) * shares_to_sell
+            friction_cost = (shares_to_sell * pos['entry_price']) * 0.0015
+            net_pnl = gross_pnl - friction_cost
             
             to_close.append({
                 'comp': comp, 'entry_date': pos['entry_date'], 'exit_date': today,
                 'entry_price': pos['entry_price'], 'exit_price': curr_p,
-                'ret_pct': ret_pct, 'pnl': pnl, 'reason': reason, 'scale_out': scale_out
+                'shares_sold': shares_to_sell, 'pnl': net_pnl, 
+                'reason': reason, 'scale_out': scale_out
             })
             
     for t in to_close:
         active_pos = pf['active_positions'][t['comp']]
-        size_to_close = 0.5 if t['scale_out'] else active_pos['position_size']
         
-        pf['cash'] += (TRADE_SIZE * size_to_close) + t['pnl']
+        pf['cash'] += (t['shares_sold'] * t['entry_price']) + t['pnl']
         pf['realized_pnl'] += t['pnl']
         if t['pnl'] > 0: pf['trades_won'] += 1
         else: pf['trades_lost'] += 1
@@ -158,30 +170,42 @@ def run_bot():
         
         if t['scale_out']:
             active_pos['position_size'] = 0.5
-            # Move stop to Break-Even (or 10% trail from peak, whichever is higher)
+            active_pos['shares'] -= t['shares_sold']
+            active_pos['capital_deployed'] -= (t['shares_sold'] * active_pos['entry_price'])
             active_pos['stop'] = max(active_pos['entry_price'], active_pos['highest'] * 0.90)
             print(f"SCALED OUT: {t['comp']} | {t['reason']} | PnL: {t['pnl']:.2f} | Runner active.")
         else:
             del pf['active_positions'][t['comp']]
             print(f"CLOSED FULLY: {t['comp']} | {t['reason']} | PnL: {t['pnl']:.2f}")
 
+    # BUY LOGIC (Institutional Risk Parity)
+    current_portfolio_value = calculate_portfolio_value(pf, market)
+    risk_amount = current_portfolio_value * RISK_PERCENT # Example: 20k on 1M portfolio
+    capital_to_deploy = risk_amount / STOP_LOSS_PCT      # Example: 200k deployed
+
     for comp, d in market.items():
         status = d['buy_zone_status']
         if 'BREAKOUT ACTIVE' in status or 'BUY' in status:
-            if comp not in pf['active_positions'] and pf['cash'] >= TRADE_SIZE and len(pf['active_positions']) < 6:
+            if comp not in pf['active_positions'] and pf['cash'] >= capital_to_deploy and len(pf['active_positions']) < 6:
                 fund_score = fundamentals.get(comp, 0)
                 if fund_score >= 50:
                     curr_p = d['current_price']
-                    pf['cash'] -= TRADE_SIZE
-                    pf['active_positions'][comp] = {
-                        'entry_date': today,
-                        'entry_price': curr_p,
-                        'highest': curr_p,
-                        'target': curr_p * 1.25,
-                        'stop': curr_p * 0.90,
-                        'position_size': 1.0
-                    }
-                    print(f"BOUGHT: {comp} at {curr_p} (Score: {fund_score})")
+                    shares_to_buy = math.floor(capital_to_deploy / curr_p)
+                    
+                    if shares_to_buy > 0:
+                        actual_capital = shares_to_buy * curr_p
+                        pf['cash'] -= actual_capital
+                        pf['active_positions'][comp] = {
+                            'entry_date': today,
+                            'entry_price': curr_p,
+                            'highest': curr_p,
+                            'target': curr_p * 1.25,
+                            'stop': curr_p * 0.90,
+                            'position_size': 1.0,
+                            'shares': shares_to_buy,
+                            'capital_deployed': actual_capital
+                        }
+                        print(f"BOUGHT: {comp} | Shares: {shares_to_buy} | Capital: {actual_capital:,.2f} | Score: {fund_score}")
 
     save_json(PORTFOLIO_FILE, pf)
     render_ledger(pf, market)

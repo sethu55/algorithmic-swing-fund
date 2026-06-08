@@ -100,12 +100,15 @@ function renderPortfolio() {
             
             let posSize = pos.position_size || 1.0;
             let sizeLabel = posSize === 1.0 ? "Full" : "Runner (50%)";
+            let shares = pos.shares || 0;
+            let capital = pos.capital_deployed || (pos.shares * pos.entry_price);
+            
             let targetLabel = posSize === 1.0 ? `₹${pos.target.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}` : "Trailing Infinite";
             
             let unrealizedPct = ((displayPrice - pos.entry_price) / pos.entry_price) * 100;
-            let unrealizedVal = (TRADE_SIZE * posSize) * (unrealizedPct / 100);
+            let unrealizedVal = shares * (displayPrice - pos.entry_price);
             
-            totalVal += ((TRADE_SIZE * posSize) + unrealizedVal);
+            totalVal += (capital + unrealizedVal);
             
             let color = unrealizedPct >= 0 ? '#10b981' : '#ef4444';
             let sign = unrealizedPct >= 0 ? '+' : '';
@@ -114,7 +117,8 @@ function renderPortfolio() {
             tr.innerHTML = `
                 <td>${pos.entry_date}<br><small style="color:#a855f7">${sizeLabel}</small></td>
                 <td><strong>${comp}</strong></td>
-                <td>₹${pos.entry_price.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+                <td>${shares}</td>
+                <td>₹${pos.entry_price.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}<br><small style="color:#94a3b8">Cap: ₹${capital.toLocaleString('en-IN', {minimumFractionDigits:0})}</small></td>
                 <td style="color:#10b981">${targetLabel}</td>
                 <td style="color:#ef4444">₹${pos.stop.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
                 <td>₹${displayPrice.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
@@ -155,9 +159,10 @@ function renderPortfolio() {
                 <td>${t.entry_date}</td>
                 <td>${t.exit_date}</td>
                 <td><strong>${t.comp}</strong></td>
+                <td>${t.shares_sold || '-'}</td>
                 <td>₹${t.entry_price.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
                 <td>₹${t.exit_price.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
-                <td style="color:${color}; font-weight:bold;">${sign}₹${t.pnl.toLocaleString('en-IN', {minimumFractionDigits:0})} (${sign}${t.ret_pct.toFixed(2)}%)</td>
+                <td style="color:${color}; font-weight:bold;">${sign}₹${t.pnl.toLocaleString('en-IN', {minimumFractionDigits:0})}</td>
                 <td>${t.reason}</td>
             `;
             closedTbody.appendChild(tr);
