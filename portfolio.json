@@ -1,6 +1,6 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 700000.0,
+    "cash": 400000.0,
     "realized_pnl": 0.0,
     "trades_won": 0,
     "trades_lost": 0,
@@ -8,16 +8,30 @@
         "Kirloskar Bros (Ancillary)": {
             "entry_date": "2026-06-06 18:20",
             "entry_price": 1711.1,
-            "highest": 1711.1,
+            "highest": 1712.4,
             "target": 2138.875,
-            "stop": 1539.99
+            "stop": 1541.16
         },
         "NTPC (Main)": {
             "entry_date": "2026-06-06 18:20",
             "entry_price": 361.65,
-            "highest": 361.65,
+            "highest": 364.6,
             "target": 452.0625,
-            "stop": 325.485
+            "stop": 328.14000000000004
+        },
+        "Gujarat Fluoro (Ancillary)": {
+            "entry_date": "2026-06-08 07:26",
+            "entry_price": 3528.2,
+            "highest": 3528.2,
+            "target": 4410.25,
+            "stop": 3175.38
+        },
+        "Linde India (Gases)": {
+            "entry_date": "2026-06-08 07:26",
+            "entry_price": 6923.0,
+            "highest": 6923.0,
+            "target": 8653.75,
+            "stop": 6230.7
         }
     },
     "closed_trades": []
