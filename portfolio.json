@@ -1,6 +1,6 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 400000.0,
+    "cash": 250000.0,
     "realized_pnl": 0.0,
     "trades_won": 0,
     "trades_lost": 0,
@@ -32,6 +32,13 @@
             "highest": 6923.0,
             "target": 8653.75,
             "stop": 6230.7
+        },
+        "Vedanta": {
+            "entry_date": "2026-06-08 12:14",
+            "entry_price": 304.25,
+            "highest": 304.25,
+            "target": 380.3125,
+            "stop": 273.825
         }
     },
     "closed_trades": []
