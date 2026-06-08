@@ -22,23 +22,23 @@
         "Gujarat Fluoro (Ancillary)": {
             "entry_date": "2026-06-08 07:26",
             "entry_price": 3528.2,
-            "highest": 3528.2,
+            "highest": 3558.5,
             "target": 4410.25,
-            "stop": 3175.38
+            "stop": 3202.65
         },
         "Linde India (Gases)": {
             "entry_date": "2026-06-08 07:26",
             "entry_price": 6923.0,
-            "highest": 6923.0,
+            "highest": 7010.5,
             "target": 8653.75,
-            "stop": 6230.7
+            "stop": 6309.45
         },
         "Vedanta": {
             "entry_date": "2026-06-08 12:14",
             "entry_price": 304.25,
-            "highest": 304.25,
+            "highest": 315.6,
             "target": 380.3125,
-            "stop": 273.825
+            "stop": 284.04
         }
     },
     "closed_trades": []
