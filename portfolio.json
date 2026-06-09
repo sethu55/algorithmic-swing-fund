@@ -1,6 +1,6 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 250000.0,
+    "cash": 100000.0,
     "realized_pnl": 0.0,
     "trades_won": 0,
     "trades_lost": 0,
@@ -8,9 +8,9 @@
         "Kirloskar Bros (Ancillary)": {
             "entry_date": "2026-06-06 18:20",
             "entry_price": 1711.1,
-            "highest": 1712.4,
+            "highest": 1716.2,
             "target": 2138.875,
-            "stop": 1541.16
+            "stop": 1544.5800000000002
         },
         "NTPC (Main)": {
             "entry_date": "2026-06-06 18:20",
@@ -39,6 +39,13 @@
             "highest": 315.6,
             "target": 380.3125,
             "stop": 284.04
+        },
+        "Prince Pipes (Ancillary)": {
+            "entry_date": "2026-06-09 04:04",
+            "entry_price": 272.65,
+            "highest": 272.65,
+            "target": 340.8125,
+            "stop": 245.385
         }
     },
     "closed_trades": []
