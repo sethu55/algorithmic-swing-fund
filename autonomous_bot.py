@@ -127,6 +127,11 @@ def run_bot():
             pos['shares'] = math.floor(150000.0 / pos['entry_price'])
             pos['capital_deployed'] = pos['shares'] * pos['entry_price']
             
+            # Reimburse the fractional change lost to the black hole
+            missing_cash = 150000.0 - pos['capital_deployed']
+            pf['cash'] += missing_cash
+            print(f"Reimbursed {missing_cash:.2f} fractional cash for {comp}")
+            
         if comp not in market: continue
         curr_p = market[comp]['current_price']
         

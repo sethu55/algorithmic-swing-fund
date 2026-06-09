@@ -86,6 +86,7 @@ function renderPortfolio() {
     };
 
     let totalVal = portfolioData.cash;
+    let totalUnrealized = 0;
     const TRADE_SIZE = 150000.0;
     
     const activeTbody = document.getElementById('active-positions-tbody');
@@ -109,6 +110,7 @@ function renderPortfolio() {
             let unrealizedVal = shares * (displayPrice - pos.entry_price);
             
             totalVal += (capital + unrealizedVal);
+            totalUnrealized += unrealizedVal;
             
             let color = unrealizedPct >= 0 ? '#10b981' : '#ef4444';
             let sign = unrealizedPct >= 0 ? '+' : '';
@@ -133,6 +135,10 @@ function renderPortfolio() {
     document.getElementById('port-val').style.color = totalVal >= portfolioData.starting_balance ? '#10b981' : '#ef4444';
     
     document.getElementById('port-cash').textContent = '₹' + portfolioData.cash.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+    
+    let unrealizedColor = totalUnrealized >= 0 ? '#10b981' : '#ef4444';
+    let unrealizedSign = totalUnrealized >= 0 ? '+' : '';
+    document.getElementById('port-unrealized').innerHTML = `<span style="color:${unrealizedColor}">${unrealizedSign}₹${totalUnrealized.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>`;
     
     let pnlPct = (portfolioData.realized_pnl / portfolioData.starting_balance) * 100;
     let pnlSign = pnlPct >= 0 ? '+' : '';
