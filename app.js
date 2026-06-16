@@ -85,8 +85,9 @@ function renderPortfolio() {
         return null; // not found
     };
 
-    let totalVal = portfolioData.cash;
+    let totalVal = 0;
     let totalUnrealized = 0;
+    let totalCapitalDeployed = 0;
     const TRADE_SIZE = 150000.0;
     
     const activeTbody = document.getElementById('active-positions-tbody');
@@ -109,8 +110,9 @@ function renderPortfolio() {
             let unrealizedPct = ((displayPrice - pos.entry_price) / pos.entry_price) * 100;
             let unrealizedVal = shares * (displayPrice - pos.entry_price);
             
-            totalVal += (capital + unrealizedVal);
+            // totalVal will be calculated at the end
             totalUnrealized += unrealizedVal;
+            totalCapitalDeployed += capital;
             
             let color = unrealizedPct >= 0 ? '#10b981' : '#ef4444';
             let sign = unrealizedPct >= 0 ? '+' : '';
@@ -131,14 +133,17 @@ function renderPortfolio() {
     }
 
     // Top Ribbon Stats
-    document.getElementById('port-val').textContent = '₹' + totalVal.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+    let trueCash = portfolioData.starting_balance + (portfolioData.realized_pnl || 0) - totalCapitalDeployed;
+    totalVal = trueCash + totalCapitalDeployed + totalUnrealized;
+
+    document.getElementById('port-val').textContent = '\u20b9' + totalVal.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2});
     document.getElementById('port-val').style.color = totalVal >= portfolioData.starting_balance ? '#10b981' : '#ef4444';
     
-    document.getElementById('port-cash').textContent = '₹' + portfolioData.cash.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+    document.getElementById('port-cash').textContent = '\u20b9' + trueCash.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2});
     
     let unrealizedColor = totalUnrealized >= 0 ? '#10b981' : '#ef4444';
     let unrealizedSign = totalUnrealized >= 0 ? '+' : '';
-    let unrealizedTotalPct = (totalUnrealized / portfolioData.starting_balance) * 100;
+    let unrealizedTotalPct = totalCapitalDeployed > 0 ? (totalUnrealized / totalCapitalDeployed) * 100 : 0;
     document.getElementById('port-unrealized').innerHTML = `<span style="color:${unrealizedColor}">${unrealizedSign}\u20b9${totalUnrealized.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})} (${unrealizedSign}${unrealizedTotalPct.toFixed(2)}%)</span>`;
     
     let pnlPct = (portfolioData.realized_pnl / portfolioData.starting_balance) * 100;
