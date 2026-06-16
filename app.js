@@ -138,7 +138,8 @@ function renderPortfolio() {
     
     let unrealizedColor = totalUnrealized >= 0 ? '#10b981' : '#ef4444';
     let unrealizedSign = totalUnrealized >= 0 ? '+' : '';
-    document.getElementById('port-unrealized').innerHTML = `<span style="color:${unrealizedColor}">${unrealizedSign}₹${totalUnrealized.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>`;
+    let unrealizedTotalPct = (totalUnrealized / portfolioData.starting_balance) * 100;
+    document.getElementById('port-unrealized').innerHTML = `<span style="color:${unrealizedColor}">${unrealizedSign}\u20b9${totalUnrealized.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})} (${unrealizedSign}${unrealizedTotalPct.toFixed(2)}%)</span>`;
     
     let pnlPct = (portfolioData.realized_pnl / portfolioData.starting_balance) * 100;
     let pnlSign = pnlPct >= 0 ? '+' : '';
