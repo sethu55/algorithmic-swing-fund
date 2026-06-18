@@ -8,9 +8,9 @@
         "Kirloskar Bros (Ancillary)": {
             "entry_date": "2026-06-06 18:20",
             "entry_price": 1711.1,
-            "highest": 1871.1,
+            "highest": 1894.7,
             "target": 2138.875,
-            "stop": 1683.99
+            "stop": 1705.23
         },
         "NTPC (Main)": {
             "entry_date": "2026-06-06 18:20",
@@ -22,16 +22,16 @@
         "Gujarat Fluoro (Ancillary)": {
             "entry_date": "2026-06-08 07:26",
             "entry_price": 3528.2,
-            "highest": 3685.1,
+            "highest": 3834.5,
             "target": 4410.25,
-            "stop": 3316.59
+            "stop": 3451.05
         },
         "Linde India (Gases)": {
             "entry_date": "2026-06-08 07:26",
             "entry_price": 6923.0,
-            "highest": 7045.0,
+            "highest": 7262.5,
             "target": 8653.75,
-            "stop": 6340.5
+            "stop": 6536.25
         },
         "Vedanta": {
             "entry_date": "2026-06-08 12:14",
