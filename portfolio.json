@@ -8,9 +8,9 @@
         "Kirloskar Bros (Ancillary)": {
             "entry_date": "2026-06-06 18:20",
             "entry_price": 1711.1,
-            "highest": 1847.0,
+            "highest": 1871.1,
             "target": 2138.875,
-            "stop": 1662.3
+            "stop": 1683.99
         },
         "NTPC (Main)": {
             "entry_date": "2026-06-06 18:20",
@@ -43,9 +43,9 @@
         "Prince Pipes (Ancillary)": {
             "entry_date": "2026-06-09 04:04",
             "entry_price": 272.65,
-            "highest": 285.15,
+            "highest": 285.5,
             "target": 340.8125,
-            "stop": 256.635
+            "stop": 256.95
         }
     },
     "closed_trades": []
