@@ -8,9 +8,9 @@
         "Kirloskar Bros (Ancillary)": {
             "entry_date": "2026-06-06 18:20",
             "entry_price": 1711.1,
-            "highest": 1903.3,
+            "highest": 1904.2,
             "target": 2138.875,
-            "stop": 1712.97
+            "stop": 1713.78
         },
         "NTPC (Main)": {
             "entry_date": "2026-06-06 18:20",
@@ -29,9 +29,9 @@
         "Linde India (Gases)": {
             "entry_date": "2026-06-08 07:26",
             "entry_price": 6923.0,
-            "highest": 7270.0,
+            "highest": 7278.0,
             "target": 8653.75,
-            "stop": 6543.0
+            "stop": 6550.2
         },
         "Vedanta": {
             "entry_date": "2026-06-08 12:14",
