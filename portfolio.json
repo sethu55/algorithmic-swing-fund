@@ -15,9 +15,9 @@
         "NTPC (Main)": {
             "entry_date": "2026-06-06 18:20",
             "entry_price": 361.65,
-            "highest": 366.95,
+            "highest": 367.05,
             "target": 452.0625,
-            "stop": 330.255
+            "stop": 330.345
         },
         "Gujarat Fluoro (Ancillary)": {
             "entry_date": "2026-06-08 07:26",
