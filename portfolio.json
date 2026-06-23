@@ -1,9 +1,9 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 100000.0,
-    "realized_pnl": 0.0,
+    "cash": 89742.13229252258,
+    "realized_pnl": -10257.867707477415,
     "trades_won": 0,
-    "trades_lost": 0,
+    "trades_lost": 1,
     "active_positions": {
         "Kirloskar Bros (Ancillary)": {
             "entry_date": "2026-06-06 18:20",
@@ -33,20 +33,31 @@
             "target": 8653.75,
             "stop": 6714.45
         },
-        "Vedanta": {
-            "entry_date": "2026-06-08 12:14",
-            "entry_price": 304.25,
-            "highest": 315.6,
-            "target": 380.3125,
-            "stop": 284.04
-        },
         "Prince Pipes (Ancillary)": {
             "entry_date": "2026-06-09 04:04",
             "entry_price": 272.65,
-            "highest": 287.45,
+            "highest": 288.0,
             "target": 340.8125,
-            "stop": 258.705
+            "stop": 259.2
+        },
+        "Vedanta": {
+            "entry_date": "2026-06-23 05:43",
+            "entry_price": 283.9,
+            "highest": 283.9,
+            "target": 354.875,
+            "stop": 255.51
         }
     },
-    "closed_trades": []
+    "closed_trades": [
+        {
+            "comp": "Vedanta",
+            "entry_date": "2026-06-08 12:14",
+            "exit_date": "2026-06-23 05:43",
+            "entry_price": 304.25,
+            "exit_price": 283.9,
+            "ret_pct": -6.83857847165161,
+            "pnl": -10257.867707477415,
+            "reason": "Trailing Stop (-10%)"
+        }
+    ]
 }
