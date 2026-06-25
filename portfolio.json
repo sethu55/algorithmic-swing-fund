@@ -1,9 +1,9 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 89742.13229252258,
-    "realized_pnl": -10257.867707477415,
+    "cash": 84339.25275747504,
+    "realized_pnl": -15660.747242524943,
     "trades_won": 0,
-    "trades_lost": 1,
+    "trades_lost": 2,
     "active_positions": {
         "Kirloskar Bros (Ancillary)": {
             "entry_date": "2026-06-06 18:20",
@@ -41,11 +41,11 @@
             "stop": 264.105
         },
         "Vedanta": {
-            "entry_date": "2026-06-23 05:43",
-            "entry_price": 283.9,
-            "highest": 305.85,
-            "target": 354.875,
-            "stop": 275.26500000000004
+            "entry_date": "2026-06-25 04:32",
+            "entry_price": 274.1,
+            "highest": 274.1,
+            "target": 342.625,
+            "stop": 246.69000000000003
         }
     },
     "closed_trades": [
@@ -57,6 +57,16 @@
             "exit_price": 283.9,
             "ret_pct": -6.83857847165161,
             "pnl": -10257.867707477415,
+            "reason": "Trailing Stop (-10%)"
+        },
+        {
+            "comp": "Vedanta",
+            "entry_date": "2026-06-23 05:43",
+            "exit_date": "2026-06-25 04:32",
+            "entry_price": 283.9,
+            "exit_price": 274.1,
+            "ret_pct": -3.6019196900316857,
+            "pnl": -5402.879535047529,
             "reason": "Trailing Stop (-10%)"
         }
     ]
