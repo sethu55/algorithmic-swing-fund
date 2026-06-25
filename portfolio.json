@@ -43,9 +43,9 @@
         "Vedanta": {
             "entry_date": "2026-06-25 04:32",
             "entry_price": 274.1,
-            "highest": 274.1,
+            "highest": 274.95,
             "target": 342.625,
-            "stop": 246.69000000000003
+            "stop": 247.45499999999998
         }
     },
     "closed_trades": [
