@@ -6,7 +6,7 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 1,033,264.95** |
+| **Current Portfolio Value** | **INR 1,050,823.50** |
 | **Available Cash** | INR 84,339.25 |
 | **Total Realized P&L** | INR -15,660.75 (-1.57%) |
 | **Win Rate** | 0.0% (2 Trades) |
@@ -14,12 +14,12 @@
 ## Active Positions
 | Date | Company | Entry Price | Target (+25%) | Trailing Stop (-10%) | Current Price | Unrealized P&L |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-06-06 18:20 | **Kirloskar Bros (Ancillary)** | INR 1711.10 | INR 2138.88 | INR 1920.78 | INR 1984.50 | 15.98% |
-| 2026-06-06 18:20 | **NTPC (Main)** | INR 361.65 | INR 452.06 | INR 330.35 | INR 357.90 | -1.04% |
-| 2026-06-08 07:26 | **Gujarat Fluoro (Ancillary)** | INR 3528.20 | INR 4410.25 | INR 3583.35 | INR 3930.90 | 11.41% |
-| 2026-06-08 07:26 | **Linde India (Gases)** | INR 6923.00 | INR 8653.75 | INR 6714.45 | INR 7212.00 | 4.17% |
-| 2026-06-09 04:04 | **Prince Pipes (Ancillary)** | INR 272.65 | INR 340.81 | INR 264.11 | INR 276.90 | 1.56% |
-| 2026-06-25 04:32 | **Vedanta** | INR 274.10 | INR 342.62 | INR 257.67 | INR 275.55 | 0.53% |
+| 2026-06-06 18:20 | **Kirloskar Bros (Ancillary)** | INR 1711.10 | INR 2138.88 | INR 1920.78 | INR 2053.40 | 20.00% |
+| 2026-06-06 18:20 | **NTPC (Main)** | INR 361.65 | INR 452.06 | INR 330.35 | INR 356.65 | -1.38% |
+| 2026-06-08 07:26 | **Gujarat Fluoro (Ancillary)** | INR 3528.20 | INR 4410.25 | INR 3583.35 | INR 3964.00 | 12.35% |
+| 2026-06-08 07:26 | **Linde India (Gases)** | INR 6923.00 | INR 8653.75 | INR 6714.45 | INR 7311.00 | 5.60% |
+| 2026-06-09 04:04 | **Prince Pipes (Ancillary)** | INR 272.65 | INR 340.81 | INR 264.11 | INR 287.15 | 5.32% |
+| 2026-06-25 04:32 | **Vedanta** | INR 274.10 | INR 342.62 | INR 257.67 | INR 280.75 | 2.43% |
 
 ## Closed Trade History
 | Entry | Exit | Company | Entry Price | Exit Price | Return % | Realized P&L | Reason |
