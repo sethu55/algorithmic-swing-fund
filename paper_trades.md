@@ -6,23 +6,24 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 1,034,523.82** |
-| **Available Cash** | INR 84,339.25 |
-| **Total Realized P&L** | INR -15,660.75 (-1.57%) |
-| **Win Rate** | 0.0% (2 Trades) |
+| **Current Portfolio Value** | **INR 1,029,658.82** |
+| **Available Cash** | INR 101,988.72 |
+| **Total Realized P&L** | INR 1,988.72 (0.20%) |
+| **Win Rate** | 33.3% (3 Trades) |
 
 ## Active Positions
 | Date | Company | Entry Price | Target (+25%) | Trailing Stop (-10%) | Current Price | Unrealized P&L |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-06-06 18:20 | **Kirloskar Bros (Ancillary)** | INR 1711.10 | INR 2138.88 | INR 1920.78 | INR 1952.90 | 14.13% |
-| 2026-06-06 18:20 | **NTPC (Main)** | INR 361.65 | INR 452.06 | INR 330.35 | INR 358.40 | -0.90% |
-| 2026-06-08 07:26 | **Gujarat Fluoro (Ancillary)** | INR 3528.20 | INR 4410.25 | INR 3583.35 | INR 3966.60 | 12.43% |
-| 2026-06-08 07:26 | **Linde India (Gases)** | INR 6923.00 | INR 8653.75 | INR 6714.45 | INR 7217.00 | 4.25% |
-| 2026-06-09 04:04 | **Prince Pipes (Ancillary)** | INR 272.65 | INR 340.81 | INR 264.11 | INR 279.15 | 2.38% |
-| 2026-06-25 04:32 | **Vedanta** | INR 274.10 | INR 342.62 | INR 257.67 | INR 277.30 | 1.17% |
+| 2026-06-06 18:20 | **NTPC (Main)** | INR 361.65 | INR 452.06 | INR 330.35 | INR 358.30 | -0.93% |
+| 2026-06-08 07:26 | **Gujarat Fluoro (Ancillary)** | INR 3528.20 | INR 4410.25 | INR 3583.35 | INR 3950.50 | 11.97% |
+| 2026-06-08 07:26 | **Linde India (Gases)** | INR 6923.00 | INR 8653.75 | INR 6714.45 | INR 7201.00 | 4.02% |
+| 2026-06-09 04:04 | **Prince Pipes (Ancillary)** | INR 272.65 | INR 340.81 | INR 264.11 | INR 279.60 | 2.55% |
+| 2026-06-25 04:32 | **Vedanta** | INR 274.10 | INR 342.62 | INR 257.67 | INR 276.40 | 0.84% |
+| 2026-07-02 08:44 | **Tata Elxsi** | INR 3675.00 | INR 4593.75 | INR 3307.50 | INR 3675.00 | 0.00% |
 
 ## Closed Trade History
 | Entry | Exit | Company | Entry Price | Exit Price | Return % | Realized P&L | Reason |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-06-06 18:20 | 2026-07-02 08:44 | **Kirloskar Bros (Ancillary)** | INR 1711.10 | INR 1915.00 | 11.77% | INR 17,649.47 | Trailing Stop (-10%) |
 | 2026-06-23 05:43 | 2026-06-25 04:32 | **Vedanta** | INR 283.90 | INR 274.10 | -3.60% | INR -5,402.88 | Trailing Stop (-10%) |
 | 2026-06-08 12:14 | 2026-06-23 05:43 | **Vedanta** | INR 304.25 | INR 283.90 | -6.84% | INR -10,257.87 | Trailing Stop (-10%) |
