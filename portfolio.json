@@ -1,9 +1,9 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 101988.7194747914,
-    "realized_pnl": 1988.719474791411,
+    "cash": 95574.46585293187,
+    "realized_pnl": -4425.534147068118,
     "trades_won": 1,
-    "trades_lost": 2,
+    "trades_lost": 3,
     "active_positions": {
         "NTPC (Main)": {
             "entry_date": "2026-06-06 18:20",
@@ -26,13 +26,6 @@
             "target": 8653.75,
             "stop": 6714.45
         },
-        "Prince Pipes (Ancillary)": {
-            "entry_date": "2026-06-09 04:04",
-            "entry_price": 272.65,
-            "highest": 293.45,
-            "target": 340.8125,
-            "stop": 264.105
-        },
         "Vedanta": {
             "entry_date": "2026-06-25 04:32",
             "entry_price": 274.1,
@@ -46,6 +39,13 @@
             "highest": 3719.2,
             "target": 4593.75,
             "stop": 3347.2799999999997
+        },
+        "L&T (Main)": {
+            "entry_date": "2026-07-08 10:17",
+            "entry_price": 3892.1,
+            "highest": 3892.1,
+            "target": 4865.125,
+            "stop": 3502.89
         }
     },
     "closed_trades": [
@@ -77,6 +77,16 @@
             "exit_price": 1915.0,
             "ret_pct": 11.76631114487757,
             "pnl": 17649.466717316354,
+            "reason": "Trailing Stop (-10%)"
+        },
+        {
+            "comp": "Prince Pipes (Ancillary)",
+            "entry_date": "2026-06-09 04:04",
+            "exit_date": "2026-07-08 10:17",
+            "entry_price": 272.65,
+            "exit_price": 261.4,
+            "ret_pct": -4.2761690812396855,
+            "pnl": -6414.253621859529,
             "reason": "Trailing Stop (-10%)"
         }
     ]
