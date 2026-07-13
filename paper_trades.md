@@ -6,7 +6,7 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 1,009,227.58** |
+| **Current Portfolio Value** | **INR 1,014,357.45** |
 | **Available Cash** | INR 95,574.47 |
 | **Total Realized P&L** | INR -4,425.53 (-0.44%) |
 | **Win Rate** | 25.0% (4 Trades) |
@@ -14,12 +14,12 @@
 ## Active Positions
 | Date | Company | Entry Price | Target (+25%) | Trailing Stop (-10%) | Current Price | Unrealized P&L |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-06-06 18:20 | **NTPC (Main)** | INR 361.65 | INR 452.06 | INR 330.35 | INR 346.75 | -4.12% |
-| 2026-06-08 07:26 | **Gujarat Fluoro (Ancillary)** | INR 3528.20 | INR 4410.25 | INR 3583.35 | INR 3888.50 | 10.21% |
-| 2026-06-08 07:26 | **Linde India (Gases)** | INR 6923.00 | INR 8653.75 | INR 6714.45 | INR 7159.50 | 3.42% |
-| 2026-06-25 04:32 | **Vedanta** | INR 274.10 | INR 342.62 | INR 257.67 | INR 269.75 | -1.59% |
-| 2026-07-02 08:44 | **Tata Elxsi** | INR 3675.00 | INR 4593.75 | INR 3347.28 | INR 3693.00 | 0.49% |
-| 2026-07-08 10:17 | **L&T (Main)** | INR 3892.10 | INR 4865.12 | INR 3592.71 | INR 3919.00 | 0.69% |
+| 2026-06-06 18:20 | **NTPC (Main)** | INR 361.65 | INR 452.06 | INR 330.35 | INR 349.65 | -3.32% |
+| 2026-06-08 07:26 | **Gujarat Fluoro (Ancillary)** | INR 3528.20 | INR 4410.25 | INR 3583.35 | INR 3899.50 | 10.52% |
+| 2026-06-08 07:26 | **Linde India (Gases)** | INR 6923.00 | INR 8653.75 | INR 6714.45 | INR 7125.00 | 2.92% |
+| 2026-06-25 04:32 | **Vedanta** | INR 274.10 | INR 342.62 | INR 257.67 | INR 269.00 | -1.86% |
+| 2026-07-02 08:44 | **Tata Elxsi** | INR 3675.00 | INR 4593.75 | INR 3413.70 | INR 3793.00 | 3.21% |
+| 2026-07-08 10:17 | **L&T (Main)** | INR 3892.10 | INR 4865.12 | INR 3592.71 | INR 3932.90 | 1.05% |
 
 ## Closed Trade History
 | Entry | Exit | Company | Entry Price | Exit Price | Return % | Realized P&L | Reason |
