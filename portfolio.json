@@ -1,9 +1,9 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 95574.46585293187,
-    "realized_pnl": -4425.534147068118,
+    "cash": 86073.65410539444,
+    "realized_pnl": -13926.345894605538,
     "trades_won": 1,
-    "trades_lost": 3,
+    "trades_lost": 4,
     "active_positions": {
         "NTPC (Main)": {
             "entry_date": "2026-06-06 18:20",
@@ -26,13 +26,6 @@
             "target": 8653.75,
             "stop": 6714.45
         },
-        "Vedanta": {
-            "entry_date": "2026-06-25 04:32",
-            "entry_price": 274.1,
-            "highest": 286.3,
-            "target": 342.625,
-            "stop": 257.67
-        },
         "Tata Elxsi": {
             "entry_date": "2026-07-02 08:44",
             "entry_price": 3675.0,
@@ -46,6 +39,13 @@
             "highest": 3991.9,
             "target": 4865.125,
             "stop": 3592.71
+        },
+        "Astral (Ancillary)": {
+            "entry_date": "2026-07-16 09:00",
+            "entry_price": 1379.8,
+            "highest": 1379.8,
+            "target": 1724.75,
+            "stop": 1241.82
         }
     },
     "closed_trades": [
@@ -87,6 +87,16 @@
             "exit_price": 261.4,
             "ret_pct": -4.2761690812396855,
             "pnl": -6414.253621859529,
+            "reason": "Trailing Stop (-10%)"
+        },
+        {
+            "comp": "Vedanta",
+            "entry_date": "2026-06-25 04:32",
+            "exit_date": "2026-07-16 09:00",
+            "entry_price": 274.1,
+            "exit_price": 257.15,
+            "ret_pct": -6.33387449835828,
+            "pnl": -9500.81174753742,
             "reason": "Trailing Stop (-10%)"
         }
     ]
