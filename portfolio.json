@@ -15,9 +15,9 @@
         "Gujarat Fluoro (Ancillary)": {
             "entry_date": "2026-06-08 07:26",
             "entry_price": 3528.2,
-            "highest": 4144.9,
+            "highest": 4183.3,
             "target": 4410.25,
-            "stop": 3730.41
+            "stop": 3764.9700000000003
         },
         "Linde India (Gases)": {
             "entry_date": "2026-06-08 07:26",
@@ -43,9 +43,9 @@
         "Astral (Ancillary)": {
             "entry_date": "2026-07-16 09:00",
             "entry_price": 1379.8,
-            "highest": 1379.8,
+            "highest": 1381.8,
             "target": 1724.75,
-            "stop": 1241.82
+            "stop": 1243.62
         }
     },
     "closed_trades": [
