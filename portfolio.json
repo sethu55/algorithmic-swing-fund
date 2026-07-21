@@ -1,8 +1,8 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 86073.65410539444,
-    "realized_pnl": -13926.345894605538,
-    "trades_won": 1,
+    "cash": 123678.14222965046,
+    "realized_pnl": 23678.142229650468,
+    "trades_won": 2,
     "trades_lost": 4,
     "active_positions": {
         "NTPC (Main)": {
@@ -11,13 +11,6 @@
             "highest": 367.05,
             "target": 452.0625,
             "stop": 330.345
-        },
-        "Gujarat Fluoro (Ancillary)": {
-            "entry_date": "2026-06-08 07:26",
-            "entry_price": 3528.2,
-            "highest": 4316.2,
-            "target": 4410.25,
-            "stop": 3884.58
         },
         "Linde India (Gases)": {
             "entry_date": "2026-06-08 07:26",
@@ -43,9 +36,16 @@
         "Astral (Ancillary)": {
             "entry_date": "2026-07-16 09:00",
             "entry_price": 1379.8,
-            "highest": 1396.1,
+            "highest": 1405.8,
             "target": 1724.75,
-            "stop": 1256.49
+            "stop": 1265.22
+        },
+        "Sterling & Wilson (Ancillary)": {
+            "entry_date": "2026-07-21 04:30",
+            "entry_price": 209.0,
+            "highest": 209.0,
+            "target": 261.25,
+            "stop": 188.1
         }
     },
     "closed_trades": [
@@ -98,6 +98,16 @@
             "ret_pct": -6.33387449835828,
             "pnl": -9500.81174753742,
             "reason": "Trailing Stop (-10%)"
+        },
+        {
+            "comp": "Gujarat Fluoro (Ancillary)",
+            "entry_date": "2026-06-08 07:26",
+            "exit_date": "2026-07-21 04:30",
+            "entry_price": 3528.2,
+            "exit_price": 4418.0,
+            "ret_pct": 25.069658749504004,
+            "pnl": 37604.48812425601,
+            "reason": "Take Profit (+25%)"
         }
     ]
 }
