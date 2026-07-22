@@ -1,9 +1,9 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 123678.14222965046,
-    "realized_pnl": 23678.142229650468,
+    "cash": 262355.183045977,
+    "realized_pnl": 12355.183045976994,
     "trades_won": 2,
-    "trades_lost": 4,
+    "trades_lost": 5,
     "active_positions": {
         "NTPC (Main)": {
             "entry_date": "2026-06-06 18:20",
@@ -19,13 +19,6 @@
             "target": 8653.75,
             "stop": 6714.45
         },
-        "Tata Elxsi": {
-            "entry_date": "2026-07-02 08:44",
-            "entry_price": 3675.0,
-            "highest": 3823.6,
-            "target": 4593.75,
-            "stop": 3441.24
-        },
         "L&T (Main)": {
             "entry_date": "2026-07-08 10:17",
             "entry_price": 3892.1,
@@ -36,9 +29,9 @@
         "Astral (Ancillary)": {
             "entry_date": "2026-07-16 09:00",
             "entry_price": 1379.8,
-            "highest": 1417.0,
+            "highest": 1426.1,
             "target": 1724.75,
-            "stop": 1275.3
+            "stop": 1283.49
         },
         "Sterling & Wilson (Ancillary)": {
             "entry_date": "2026-07-21 04:30",
@@ -108,6 +101,16 @@
             "ret_pct": 25.069658749504004,
             "pnl": 37604.48812425601,
             "reason": "Take Profit (+25%)"
+        },
+        {
+            "comp": "Tata Elxsi",
+            "entry_date": "2026-07-02 08:44",
+            "exit_date": "2026-07-22 04:32",
+            "entry_price": 3675.0,
+            "exit_price": 3403.1,
+            "ret_pct": -7.548639455782316,
+            "pnl": -11322.959183673474,
+            "reason": "Trailing Stop (-10%)"
         }
     ]
 }

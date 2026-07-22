@@ -6,24 +6,24 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 1,011,998.07** |
-| **Available Cash** | INR 123,678.14 |
-| **Total Realized P&L** | INR 23,678.14 (2.37%) |
-| **Win Rate** | 33.3% (6 Trades) |
+| **Current Portfolio Value** | **INR 1,006,727.08** |
+| **Available Cash** | INR 262,355.18 |
+| **Total Realized P&L** | INR 12,355.18 (1.24%) |
+| **Win Rate** | 28.6% (7 Trades) |
 
 ## Active Positions
 | Date | Company | Entry Price | Target (+25%) | Trailing Stop (-10%) | Current Price | Unrealized P&L |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-06-06 18:20 | **NTPC (Main)** | INR 361.65 | INR 452.06 | INR 330.35 | INR 348.55 | -3.62% |
-| 2026-06-08 07:26 | **Linde India (Gases)** | INR 6923.00 | INR 8653.75 | INR 6714.45 | INR 6996.50 | 1.06% |
-| 2026-07-02 08:44 | **Tata Elxsi** | INR 3675.00 | INR 4593.75 | INR 3441.24 | INR 3461.60 | -5.81% |
-| 2026-07-08 10:17 | **L&T (Main)** | INR 3892.10 | INR 4865.12 | INR 3592.71 | INR 3846.60 | -1.17% |
-| 2026-07-16 09:00 | **Astral (Ancillary)** | INR 1379.80 | INR 1724.75 | INR 1275.30 | INR 1415.10 | 2.56% |
-| 2026-07-21 04:30 | **Sterling & Wilson (Ancillary)** | INR 209.00 | INR 261.25 | INR 193.00 | INR 207.31 | -0.81% |
+| 2026-06-06 18:20 | **NTPC (Main)** | INR 361.65 | INR 452.06 | INR 330.35 | INR 347.10 | -4.02% |
+| 2026-06-08 07:26 | **Linde India (Gases)** | INR 6923.00 | INR 8653.75 | INR 6714.45 | INR 6962.50 | 0.57% |
+| 2026-07-08 10:17 | **L&T (Main)** | INR 3892.10 | INR 4865.12 | INR 3592.71 | INR 3816.70 | -1.94% |
+| 2026-07-16 09:00 | **Astral (Ancillary)** | INR 1379.80 | INR 1724.75 | INR 1283.49 | INR 1426.10 | 3.36% |
+| 2026-07-21 04:30 | **Sterling & Wilson (Ancillary)** | INR 209.00 | INR 261.25 | INR 193.00 | INR 205.41 | -1.72% |
 
 ## Closed Trade History
 | Entry | Exit | Company | Entry Price | Exit Price | Return % | Realized P&L | Reason |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-02 08:44 | 2026-07-22 04:32 | **Tata Elxsi** | INR 3675.00 | INR 3403.10 | -7.55% | INR -11,322.96 | Trailing Stop (-10%) |
 | 2026-06-08 07:26 | 2026-07-21 04:30 | **Gujarat Fluoro (Ancillary)** | INR 3528.20 | INR 4418.00 | 25.07% | INR 37,604.49 | Take Profit (+25%) |
 | 2026-06-25 04:32 | 2026-07-16 09:00 | **Vedanta** | INR 274.10 | INR 257.15 | -6.33% | INR -9,500.81 | Trailing Stop (-10%) |
 | 2026-06-09 04:04 | 2026-07-08 10:17 | **Prince Pipes (Ancillary)** | INR 272.65 | INR 261.40 | -4.28% | INR -6,414.25 | Trailing Stop (-10%) |
