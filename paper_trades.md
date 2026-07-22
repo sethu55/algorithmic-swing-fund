@@ -6,7 +6,7 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 1,009,547.81** |
+| **Current Portfolio Value** | **INR 1,010,129.23** |
 | **Available Cash** | INR 262,355.18 |
 | **Total Realized P&L** | INR 12,355.18 (1.24%) |
 | **Win Rate** | 28.6% (7 Trades) |
@@ -16,8 +16,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 2026-06-06 18:20 | **NTPC (Main)** | INR 361.65 | INR 452.06 | INR 330.35 | INR 348.55 | -3.62% |
 | 2026-06-08 07:26 | **Linde India (Gases)** | INR 6923.00 | INR 8653.75 | INR 6714.45 | INR 7004.00 | 1.17% |
-| 2026-07-08 10:17 | **L&T (Main)** | INR 3892.10 | INR 4865.12 | INR 3592.71 | INR 3846.60 | -1.17% |
-| 2026-07-16 09:00 | **Astral (Ancillary)** | INR 1379.80 | INR 1724.75 | INR 1287.72 | INR 1415.10 | 2.56% |
+| 2026-07-08 10:17 | **L&T (Main)** | INR 3892.10 | INR 4865.12 | INR 3592.71 | INR 3817.40 | -1.92% |
+| 2026-07-16 09:00 | **Astral (Ancillary)** | INR 1379.80 | INR 1724.75 | INR 1287.72 | INR 1430.80 | 3.70% |
 | 2026-07-21 04:30 | **Sterling & Wilson (Ancillary)** | INR 209.00 | INR 261.25 | INR 193.00 | INR 207.31 | -0.81% |
 
 ## Closed Trade History
