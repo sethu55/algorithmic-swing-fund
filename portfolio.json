@@ -43,9 +43,9 @@
         "Linde India (Gases)": {
             "entry_date": "2026-07-23 08:01",
             "entry_price": 6710.5,
-            "highest": 6710.5,
+            "highest": 6840.5,
             "target": 8388.125,
-            "stop": 6039.45
+            "stop": 6156.45
         }
     },
     "closed_trades": [
