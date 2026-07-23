@@ -1,6 +1,6 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 262355.183045977,
+    "cash": 112355.18304597703,
     "realized_pnl": 12355.183045976994,
     "trades_won": 2,
     "trades_lost": 5,
@@ -39,6 +39,13 @@
             "highest": 214.44,
             "target": 261.25,
             "stop": 192.996
+        },
+        "Graphite India (Ancillary)": {
+            "entry_date": "2026-07-23 05:41",
+            "entry_price": 662.2,
+            "highest": 662.2,
+            "target": 827.75,
+            "stop": 595.98
         }
     },
     "closed_trades": [
