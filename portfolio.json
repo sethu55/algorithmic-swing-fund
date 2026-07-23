@@ -1,9 +1,9 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 112355.18304597703,
-    "realized_pnl": 12355.183045976994,
+    "cash": 107525.96522133454,
+    "realized_pnl": 7525.965221334498,
     "trades_won": 2,
-    "trades_lost": 5,
+    "trades_lost": 6,
     "active_positions": {
         "NTPC (Main)": {
             "entry_date": "2026-06-06 18:20",
@@ -11,13 +11,6 @@
             "highest": 367.05,
             "target": 452.0625,
             "stop": 330.345
-        },
-        "Linde India (Gases)": {
-            "entry_date": "2026-06-08 07:26",
-            "entry_price": 6923.0,
-            "highest": 7460.5,
-            "target": 8653.75,
-            "stop": 6714.45
         },
         "L&T (Main)": {
             "entry_date": "2026-07-08 10:17",
@@ -43,9 +36,16 @@
         "Graphite India (Ancillary)": {
             "entry_date": "2026-07-23 05:41",
             "entry_price": 662.2,
-            "highest": 662.2,
+            "highest": 664.25,
             "target": 827.75,
-            "stop": 595.98
+            "stop": 597.825
+        },
+        "Linde India (Gases)": {
+            "entry_date": "2026-07-23 08:01",
+            "entry_price": 6710.5,
+            "highest": 6710.5,
+            "target": 8388.125,
+            "stop": 6039.45
         }
     },
     "closed_trades": [
@@ -117,6 +117,16 @@
             "exit_price": 3403.1,
             "ret_pct": -7.548639455782316,
             "pnl": -11322.959183673474,
+            "reason": "Trailing Stop (-10%)"
+        },
+        {
+            "comp": "Linde India (Gases)",
+            "entry_date": "2026-06-08 07:26",
+            "exit_date": "2026-07-23 08:01",
+            "entry_price": 6923.0,
+            "exit_price": 6710.5,
+            "ret_pct": -3.219478549761664,
+            "pnl": -4829.2178246424955,
             "reason": "Trailing Stop (-10%)"
         }
     ]
