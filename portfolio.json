@@ -22,9 +22,9 @@
         "Astral (Ancillary)": {
             "entry_date": "2026-07-16 09:00",
             "entry_price": 1379.8,
-            "highest": 1476.3,
+            "highest": 1481.6,
             "target": 1724.75,
-            "stop": 1328.67
+            "stop": 1333.44
         },
         "Sterling & Wilson (Ancillary)": {
             "entry_date": "2026-07-21 04:30",
@@ -36,9 +36,9 @@
         "Graphite India (Ancillary)": {
             "entry_date": "2026-07-23 05:41",
             "entry_price": 662.2,
-            "highest": 674.4,
+            "highest": 674.45,
             "target": 827.75,
-            "stop": 606.96
+            "stop": 607.0050000000001
         },
         "Linde India (Gases)": {
             "entry_date": "2026-07-23 08:01",
