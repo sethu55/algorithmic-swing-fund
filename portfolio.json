@@ -15,9 +15,9 @@
         "L&T (Main)": {
             "entry_date": "2026-07-08 10:17",
             "entry_price": 3892.1,
-            "highest": 4025.0,
+            "highest": 4055.0,
             "target": 4865.125,
-            "stop": 3622.5
+            "stop": 3649.5
         },
         "Astral (Ancillary)": {
             "entry_date": "2026-07-16 09:00",
@@ -36,9 +36,9 @@
         "Graphite India (Ancillary)": {
             "entry_date": "2026-07-23 05:41",
             "entry_price": 662.2,
-            "highest": 710.05,
+            "highest": 732.2,
             "target": 827.75,
-            "stop": 639.045
+            "stop": 658.98
         },
         "Linde India (Gases)": {
             "entry_date": "2026-07-23 08:01",
