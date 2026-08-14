@@ -6,7 +6,7 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 1,024,725.18** |
+| **Current Portfolio Value** | **INR 1,042,271.92** |
 | **Available Cash** | INR 107,525.97 |
 | **Total Realized P&L** | INR 7,525.97 (0.75%) |
 | **Win Rate** | 25.0% (8 Trades) |
@@ -14,12 +14,12 @@
 ## Active Positions
 | Date | Company | Entry Price | Target (+25%) | Trailing Stop (-10%) | Current Price | Unrealized P&L |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-06-06 18:20 | **NTPC (Main)** | INR 361.65 | INR 452.06 | INR 330.35 | INR 339.45 | -6.14% |
-| 2026-07-08 10:17 | **L&T (Main)** | INR 3892.10 | INR 4865.12 | INR 3672.00 | INR 4020.00 | 3.29% |
-| 2026-07-16 09:00 | **Astral (Ancillary)** | INR 1379.80 | INR 1724.75 | INR 1436.85 | INR 1464.00 | 6.10% |
+| 2026-06-06 18:20 | **NTPC (Main)** | INR 361.65 | INR 452.06 | INR 330.35 | INR 344.25 | -4.81% |
+| 2026-07-08 10:17 | **L&T (Main)** | INR 3892.10 | INR 4865.12 | INR 3672.00 | INR 4070.70 | 4.59% |
+| 2026-07-16 09:00 | **Astral (Ancillary)** | INR 1379.80 | INR 1724.75 | INR 1436.85 | INR 1589.50 | 15.20% |
 | 2026-07-21 04:30 | **Sterling & Wilson (Ancillary)** | INR 209.00 | INR 261.25 | INR 193.00 | INR 203.87 | -2.45% |
-| 2026-07-23 05:41 | **Graphite India (Ancillary)** | INR 662.20 | INR 827.75 | INR 667.53 | INR 726.25 | 9.67% |
-| 2026-07-23 08:01 | **Linde India (Gases)** | INR 6710.50 | INR 8388.12 | INR 6464.70 | INR 6777.50 | 1.00% |
+| 2026-07-23 05:41 | **Graphite India (Ancillary)** | INR 662.20 | INR 827.75 | INR 667.53 | INR 734.85 | 10.97% |
+| 2026-07-23 08:01 | **Linde India (Gases)** | INR 6710.50 | INR 8388.12 | INR 6464.70 | INR 6688.50 | -0.33% |
 
 ## Closed Trade History
 | Entry | Exit | Company | Entry Price | Exit Price | Return % | Realized P&L | Reason |
