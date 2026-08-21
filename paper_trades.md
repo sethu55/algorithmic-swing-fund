@@ -6,24 +6,25 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 1,022,239.02** |
-| **Available Cash** | INR 107,525.97 |
-| **Total Realized P&L** | INR 7,525.97 (0.75%) |
-| **Win Rate** | 25.0% (8 Trades) |
+| **Current Portfolio Value** | **INR 1,021,232.25** |
+| **Available Cash** | INR 95,674.17 |
+| **Total Realized P&L** | INR -4,325.83 (-0.43%) |
+| **Win Rate** | 22.2% (9 Trades) |
 
 ## Active Positions
 | Date | Company | Entry Price | Target (+25%) | Trailing Stop (-10%) | Current Price | Unrealized P&L |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-06-06 18:20 | **NTPC (Main)** | INR 361.65 | INR 452.06 | INR 330.35 | INR 338.75 | -6.33% |
-| 2026-07-08 10:17 | **L&T (Main)** | INR 3892.10 | INR 4865.12 | INR 3685.05 | INR 4094.50 | 5.20% |
-| 2026-07-16 09:00 | **Astral (Ancillary)** | INR 1379.80 | INR 1724.75 | INR 1436.85 | INR 1537.10 | 11.40% |
-| 2026-07-21 04:30 | **Sterling & Wilson (Ancillary)** | INR 209.00 | INR 261.25 | INR 193.00 | INR 193.55 | -7.39% |
-| 2026-07-23 05:41 | **Graphite India (Ancillary)** | INR 662.20 | INR 827.75 | INR 667.53 | INR 712.45 | 7.59% |
-| 2026-07-23 08:01 | **Linde India (Gases)** | INR 6710.50 | INR 8388.12 | INR 6464.70 | INR 6666.50 | -0.66% |
+| 2026-06-06 18:20 | **NTPC (Main)** | INR 361.65 | INR 452.06 | INR 330.35 | INR 339.35 | -6.17% |
+| 2026-07-08 10:17 | **L&T (Main)** | INR 3892.10 | INR 4865.12 | INR 3685.05 | INR 4091.30 | 5.12% |
+| 2026-07-16 09:00 | **Astral (Ancillary)** | INR 1379.80 | INR 1724.75 | INR 1436.85 | INR 1535.50 | 11.28% |
+| 2026-07-23 05:41 | **Graphite India (Ancillary)** | INR 662.20 | INR 827.75 | INR 667.53 | INR 710.75 | 7.33% |
+| 2026-07-23 08:01 | **Linde India (Gases)** | INR 6710.50 | INR 8388.12 | INR 6464.70 | INR 6675.00 | -0.53% |
+| 2026-08-21 09:30 | **EMS Ltd (Main)** | INR 397.75 | INR 497.19 | INR 357.98 | INR 397.75 | 0.00% |
 
 ## Closed Trade History
 | Entry | Exit | Company | Entry Price | Exit Price | Return % | Realized P&L | Reason |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-21 04:30 | 2026-08-21 09:30 | **Sterling & Wilson (Ancillary)** | INR 209.00 | INR 192.80 | -7.90% | INR -11,851.79 | Trailing Stop (-10%) |
 | 2026-06-08 07:26 | 2026-07-23 08:01 | **Linde India (Gases)** | INR 6923.00 | INR 6710.50 | -3.22% | INR -4,829.22 | Trailing Stop (-10%) |
 | 2026-07-02 08:44 | 2026-07-22 04:32 | **Tata Elxsi** | INR 3675.00 | INR 3403.10 | -7.55% | INR -11,322.96 | Trailing Stop (-10%) |
 | 2026-06-08 07:26 | 2026-07-21 04:30 | **Gujarat Fluoro (Ancillary)** | INR 3528.20 | INR 4418.00 | 25.07% | INR 37,604.49 | Take Profit (+25%) |

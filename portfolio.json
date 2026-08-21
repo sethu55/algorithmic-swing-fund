@@ -1,9 +1,9 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 107525.96522133454,
-    "realized_pnl": 7525.965221334498,
+    "cash": 95674.17096296133,
+    "realized_pnl": -4325.8290370387,
     "trades_won": 2,
-    "trades_lost": 6,
+    "trades_lost": 7,
     "active_positions": {
         "NTPC (Main)": {
             "entry_date": "2026-06-06 18:20",
@@ -26,13 +26,6 @@
             "target": 1724.75,
             "stop": 1436.8500000000001
         },
-        "Sterling & Wilson (Ancillary)": {
-            "entry_date": "2026-07-21 04:30",
-            "entry_price": 209.0,
-            "highest": 214.44,
-            "target": 261.25,
-            "stop": 192.996
-        },
         "Graphite India (Ancillary)": {
             "entry_date": "2026-07-23 05:41",
             "entry_price": 662.2,
@@ -46,6 +39,13 @@
             "highest": 7183.0,
             "target": 8388.125,
             "stop": 6464.7
+        },
+        "EMS Ltd (Main)": {
+            "entry_date": "2026-08-21 09:30",
+            "entry_price": 397.75,
+            "highest": 397.75,
+            "target": 497.1875,
+            "stop": 357.975
         }
     },
     "closed_trades": [
@@ -127,6 +127,16 @@
             "exit_price": 6710.5,
             "ret_pct": -3.219478549761664,
             "pnl": -4829.2178246424955,
+            "reason": "Trailing Stop (-10%)"
+        },
+        {
+            "comp": "Sterling & Wilson (Ancillary)",
+            "entry_date": "2026-07-21 04:30",
+            "exit_date": "2026-08-21 09:30",
+            "entry_price": 209.0,
+            "exit_price": 192.8,
+            "ret_pct": -7.9011961722488,
+            "pnl": -11851.794258373198,
             "reason": "Trailing Stop (-10%)"
         }
     ]
