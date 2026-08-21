@@ -43,9 +43,9 @@
         "EMS Ltd (Main)": {
             "entry_date": "2026-08-21 09:30",
             "entry_price": 397.75,
-            "highest": 397.75,
+            "highest": 405.0,
             "target": 497.1875,
-            "stop": 357.975
+            "stop": 364.5
         }
     },
     "closed_trades": [
