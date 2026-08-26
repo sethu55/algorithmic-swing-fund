@@ -6,7 +6,7 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 1,004,357.59** |
+| **Current Portfolio Value** | **INR 1,002,507.89** |
 | **Available Cash** | INR 95,674.17 |
 | **Total Realized P&L** | INR -4,325.83 (-0.43%) |
 | **Win Rate** | 22.2% (9 Trades) |
@@ -14,12 +14,12 @@
 ## Active Positions
 | Date | Company | Entry Price | Target (+25%) | Trailing Stop (-10%) | Current Price | Unrealized P&L |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-06-06 18:20 | **NTPC (Main)** | INR 361.65 | INR 452.06 | INR 330.35 | INR 336.45 | -6.97% |
-| 2026-07-08 10:17 | **L&T (Main)** | INR 3892.10 | INR 4865.12 | INR 3707.10 | INR 4063.00 | 4.39% |
-| 2026-07-16 09:00 | **Astral (Ancillary)** | INR 1379.80 | INR 1724.75 | INR 1436.85 | INR 1530.00 | 10.89% |
-| 2026-07-23 05:41 | **Graphite India (Ancillary)** | INR 662.20 | INR 827.75 | INR 667.53 | INR 688.60 | 3.99% |
-| 2026-07-23 08:01 | **Linde India (Gases)** | INR 6710.50 | INR 8388.12 | INR 6464.70 | INR 6640.00 | -1.05% |
-| 2026-08-21 09:30 | **EMS Ltd (Main)** | INR 397.75 | INR 497.19 | INR 364.50 | INR 376.05 | -5.46% |
+| 2026-06-06 18:20 | **NTPC (Main)** | INR 361.65 | INR 452.06 | INR 330.35 | INR 336.50 | -6.95% |
+| 2026-07-08 10:17 | **L&T (Main)** | INR 3892.10 | INR 4865.12 | INR 3707.10 | INR 4051.90 | 4.11% |
+| 2026-07-16 09:00 | **Astral (Ancillary)** | INR 1379.80 | INR 1724.75 | INR 1436.85 | INR 1530.90 | 10.95% |
+| 2026-07-23 05:41 | **Graphite India (Ancillary)** | INR 662.20 | INR 827.75 | INR 667.53 | INR 687.80 | 3.87% |
+| 2026-07-23 08:01 | **Linde India (Gases)** | INR 6710.50 | INR 8388.12 | INR 6464.70 | INR 6591.00 | -1.78% |
+| 2026-08-21 09:30 | **EMS Ltd (Main)** | INR 397.75 | INR 497.19 | INR 364.50 | INR 375.35 | -5.63% |
 
 ## Closed Trade History
 | Entry | Exit | Company | Entry Price | Exit Price | Return % | Realized P&L | Reason |
