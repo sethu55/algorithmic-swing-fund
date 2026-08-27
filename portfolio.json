@@ -1,17 +1,10 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 95674.17096296133,
-    "realized_pnl": -4325.8290370387,
+    "cash": 82425.52932048932,
+    "realized_pnl": -17574.470679510698,
     "trades_won": 2,
-    "trades_lost": 7,
+    "trades_lost": 8,
     "active_positions": {
-        "NTPC (Main)": {
-            "entry_date": "2026-06-06 18:20",
-            "entry_price": 361.65,
-            "highest": 367.05,
-            "target": 452.0625,
-            "stop": 330.345
-        },
         "L&T (Main)": {
             "entry_date": "2026-07-08 10:17",
             "entry_price": 3892.1,
@@ -46,6 +39,13 @@
             "highest": 405.0,
             "target": 497.1875,
             "stop": 364.5
+        },
+        "Stallion India (Chems)": {
+            "entry_date": "2026-08-27 06:32",
+            "entry_price": 221.0,
+            "highest": 221.0,
+            "target": 276.25,
+            "stop": 198.9
         }
     },
     "closed_trades": [
@@ -137,6 +137,16 @@
             "exit_price": 192.8,
             "ret_pct": -7.9011961722488,
             "pnl": -11851.794258373198,
+            "reason": "Trailing Stop (-10%)"
+        },
+        {
+            "comp": "NTPC (Main)",
+            "entry_date": "2026-06-06 18:20",
+            "exit_date": "2026-08-27 06:32",
+            "entry_price": 361.65,
+            "exit_price": 330.25,
+            "ret_pct": -8.832427761647997,
+            "pnl": -13248.641642471996,
             "reason": "Trailing Stop (-10%)"
         }
     ]
