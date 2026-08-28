@@ -6,7 +6,7 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 995,101.25** |
+| **Current Portfolio Value** | **INR 994,853.65** |
 | **Available Cash** | INR 82,425.53 |
 | **Total Realized P&L** | INR -17,574.47 (-1.76%) |
 | **Win Rate** | 20.0% (10 Trades) |
@@ -14,12 +14,12 @@
 ## Active Positions
 | Date | Company | Entry Price | Target (+25%) | Trailing Stop (-10%) | Current Price | Unrealized P&L |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-07-08 10:17 | **L&T (Main)** | INR 3892.10 | INR 4865.12 | INR 3707.10 | INR 4045.80 | 3.95% |
-| 2026-07-16 09:00 | **Astral (Ancillary)** | INR 1379.80 | INR 1724.75 | INR 1436.85 | INR 1532.30 | 11.05% |
-| 2026-07-23 05:41 | **Graphite India (Ancillary)** | INR 662.20 | INR 827.75 | INR 667.53 | INR 696.00 | 5.10% |
-| 2026-07-23 08:01 | **Linde India (Gases)** | INR 6710.50 | INR 8388.12 | INR 6464.70 | INR 6504.00 | -3.08% |
-| 2026-08-21 09:30 | **EMS Ltd (Main)** | INR 397.75 | INR 497.19 | INR 364.50 | INR 377.85 | -5.00% |
-| 2026-08-27 06:32 | **Stallion India (Chems)** | INR 221.00 | INR 276.25 | INR 202.41 | INR 213.10 | -3.57% |
+| 2026-07-08 10:17 | **L&T (Main)** | INR 3892.10 | INR 4865.12 | INR 3707.10 | INR 4027.00 | 3.47% |
+| 2026-07-16 09:00 | **Astral (Ancillary)** | INR 1379.80 | INR 1724.75 | INR 1436.85 | INR 1529.20 | 10.83% |
+| 2026-07-23 05:41 | **Graphite India (Ancillary)** | INR 662.20 | INR 827.75 | INR 667.53 | INR 683.00 | 3.14% |
+| 2026-07-23 08:01 | **Linde India (Gases)** | INR 6710.50 | INR 8388.12 | INR 6464.70 | INR 6549.00 | -2.41% |
+| 2026-08-21 09:30 | **EMS Ltd (Main)** | INR 397.75 | INR 497.19 | INR 364.50 | INR 381.10 | -4.19% |
+| 2026-08-27 06:32 | **Stallion India (Chems)** | INR 221.00 | INR 276.25 | INR 202.41 | INR 215.35 | -2.56% |
 
 ## Closed Trade History
 | Entry | Exit | Company | Entry Price | Exit Price | Return % | Realized P&L | Reason |
