@@ -1,9 +1,9 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 82425.52932048932,
-    "realized_pnl": -17574.470679510698,
+    "cash": 76444.62439537197,
+    "realized_pnl": -23555.37560462805,
     "trades_won": 2,
-    "trades_lost": 8,
+    "trades_lost": 9,
     "active_positions": {
         "L&T (Main)": {
             "entry_date": "2026-07-08 10:17",
@@ -26,13 +26,6 @@
             "target": 827.75,
             "stop": 667.5300000000001
         },
-        "Linde India (Gases)": {
-            "entry_date": "2026-07-23 08:01",
-            "entry_price": 6710.5,
-            "highest": 7183.0,
-            "target": 8388.125,
-            "stop": 6464.7
-        },
         "EMS Ltd (Main)": {
             "entry_date": "2026-08-21 09:30",
             "entry_price": 397.75,
@@ -46,6 +39,13 @@
             "highest": 224.9,
             "target": 276.25,
             "stop": 202.41
+        },
+        "NTPC (Main)": {
+            "entry_date": "2026-08-31 06:13",
+            "entry_price": 324.9,
+            "highest": 324.9,
+            "target": 406.125,
+            "stop": 292.40999999999997
         }
     },
     "closed_trades": [
@@ -147,6 +147,16 @@
             "exit_price": 330.25,
             "ret_pct": -8.832427761647997,
             "pnl": -13248.641642471996,
+            "reason": "Trailing Stop (-10%)"
+        },
+        {
+            "comp": "Linde India (Gases)",
+            "entry_date": "2026-07-23 08:01",
+            "exit_date": "2026-08-31 06:13",
+            "entry_price": 6710.5,
+            "exit_price": 6453.0,
+            "ret_pct": -3.9872699500782356,
+            "pnl": -5980.904925117354,
             "reason": "Trailing Stop (-10%)"
         }
     ]
