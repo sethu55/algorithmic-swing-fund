@@ -43,9 +43,9 @@
         "NTPC (Main)": {
             "entry_date": "2026-08-31 06:13",
             "entry_price": 324.9,
-            "highest": 330.25,
+            "highest": 330.3,
             "target": 406.125,
-            "stop": 297.225
+            "stop": 297.27000000000004
         }
     },
     "closed_trades": [
