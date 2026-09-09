@@ -6,7 +6,7 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 1,033,669.59** |
+| **Current Portfolio Value** | **INR 1,025,336.43** |
 | **Available Cash** | INR 120,345.27 |
 | **Total Realized P&L** | INR 20,345.27 (2.03%) |
 | **Win Rate** | 25.0% (12 Trades) |
@@ -14,12 +14,12 @@
 ## Active Positions
 | Date | Company | Entry Price | Target (+25%) | Trailing Stop (-10%) | Current Price | Unrealized P&L |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-07-08 10:17 | **L&T (Main)** | INR 3892.10 | INR 4865.12 | INR 3707.10 | INR 3922.60 | 0.78% |
-| 2026-07-16 09:00 | **Astral (Ancillary)** | INR 1379.80 | INR 1724.75 | INR 1436.85 | INR 1474.80 | 6.89% |
-| 2026-08-21 09:30 | **EMS Ltd (Main)** | INR 397.75 | INR 497.19 | INR 364.50 | INR 385.80 | -3.00% |
-| 2026-08-27 06:32 | **Stallion India (Chems)** | INR 221.00 | INR 276.25 | INR 202.41 | INR 223.30 | 1.04% |
-| 2026-08-31 06:13 | **NTPC (Main)** | INR 324.90 | INR 406.12 | INR 301.37 | INR 334.50 | 2.95% |
-| 2026-09-09 06:15 | **Thermax (Ancillary)** | INR 3630.50 | INR 4538.12 | INR 3274.74 | INR 3638.60 | 0.22% |
+| 2026-07-08 10:17 | **L&T (Main)** | INR 3892.10 | INR 4865.12 | INR 3707.10 | INR 3946.10 | 1.39% |
+| 2026-07-16 09:00 | **Astral (Ancillary)** | INR 1379.80 | INR 1724.75 | INR 1436.85 | INR 1500.80 | 8.77% |
+| 2026-08-21 09:30 | **EMS Ltd (Main)** | INR 397.75 | INR 497.19 | INR 364.50 | INR 378.40 | -4.86% |
+| 2026-08-27 06:32 | **Stallion India (Chems)** | INR 221.00 | INR 276.25 | INR 202.41 | INR 212.70 | -3.76% |
+| 2026-08-31 06:13 | **NTPC (Main)** | INR 324.90 | INR 406.12 | INR 301.37 | INR 330.80 | 1.82% |
+| 2026-09-09 06:15 | **Thermax (Ancillary)** | INR 3630.50 | INR 4538.12 | INR 3274.74 | INR 3629.60 | -0.02% |
 
 ## Closed Trade History
 | Entry | Exit | Company | Entry Price | Exit Price | Return % | Realized P&L | Reason |
