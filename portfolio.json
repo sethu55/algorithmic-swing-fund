@@ -1,8 +1,8 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 76444.62439537197,
-    "realized_pnl": -23555.37560462805,
-    "trades_won": 2,
+    "cash": 120345.2661954324,
+    "realized_pnl": 20345.266195432338,
+    "trades_won": 3,
     "trades_lost": 9,
     "active_positions": {
         "L&T (Main)": {
@@ -18,13 +18,6 @@
             "highest": 1596.5,
             "target": 1724.75,
             "stop": 1436.8500000000001
-        },
-        "Graphite India (Ancillary)": {
-            "entry_date": "2026-07-23 05:41",
-            "entry_price": 662.2,
-            "highest": 741.7,
-            "target": 827.75,
-            "stop": 667.5300000000001
         },
         "EMS Ltd (Main)": {
             "entry_date": "2026-08-21 09:30",
@@ -43,9 +36,16 @@
         "NTPC (Main)": {
             "entry_date": "2026-08-31 06:13",
             "entry_price": 324.9,
-            "highest": 332.5,
+            "highest": 334.85,
             "target": 406.125,
-            "stop": 299.25
+            "stop": 301.365
+        },
+        "Thermax (Ancillary)": {
+            "entry_date": "2026-09-09 06:15",
+            "entry_price": 3630.5,
+            "highest": 3630.5,
+            "target": 4538.125,
+            "stop": 3267.4500000000003
         }
     },
     "closed_trades": [
@@ -158,6 +158,16 @@
             "ret_pct": -3.9872699500782356,
             "pnl": -5980.904925117354,
             "reason": "Trailing Stop (-10%)"
+        },
+        {
+            "comp": "Graphite India (Ancillary)",
+            "entry_date": "2026-07-23 05:41",
+            "exit_date": "2026-09-09 06:15",
+            "entry_price": 662.2,
+            "exit_price": 857.0,
+            "ret_pct": 29.267094533373594,
+            "pnl": 43900.64180006039,
+            "reason": "Take Profit (+25%)"
         }
     ]
 }
