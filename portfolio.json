@@ -29,23 +29,23 @@
         "Stallion India (Chems)": {
             "entry_date": "2026-08-27 06:32",
             "entry_price": 221.0,
-            "highest": 232.0,
+            "highest": 234.3,
             "target": 276.25,
-            "stop": 208.8
+            "stop": 210.87
         },
         "NTPC (Main)": {
             "entry_date": "2026-08-31 06:13",
             "entry_price": 324.9,
-            "highest": 334.85,
+            "highest": 335.0,
             "target": 406.125,
-            "stop": 301.365
+            "stop": 301.5
         },
         "Thermax (Ancillary)": {
             "entry_date": "2026-09-09 06:15",
             "entry_price": 3630.5,
-            "highest": 3638.6,
+            "highest": 3645.4,
             "target": 4538.125,
-            "stop": 3274.74
+            "stop": 3280.86
         }
     },
     "closed_trades": [
