@@ -1,8 +1,8 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 120345.2661954324,
-    "realized_pnl": 20345.266195432338,
-    "trades_won": 3,
+    "cash": 123979.52115992003,
+    "realized_pnl": 23979.521159919943,
+    "trades_won": 4,
     "trades_lost": 9,
     "active_positions": {
         "L&T (Main)": {
@@ -11,13 +11,6 @@
             "highest": 4119.0,
             "target": 4865.125,
             "stop": 3707.1
-        },
-        "Astral (Ancillary)": {
-            "entry_date": "2026-07-16 09:00",
-            "entry_price": 1379.8,
-            "highest": 1596.5,
-            "target": 1724.75,
-            "stop": 1436.8500000000001
         },
         "EMS Ltd (Main)": {
             "entry_date": "2026-08-21 09:30",
@@ -46,6 +39,13 @@
             "highest": 3645.4,
             "target": 4538.125,
             "stop": 3280.86
+        },
+        "Tata Elxsi": {
+            "entry_date": "2026-09-11 05:15",
+            "entry_price": 3404.8,
+            "highest": 3404.8,
+            "target": 4256.0,
+            "stop": 3064.32
         }
     },
     "closed_trades": [
@@ -168,6 +168,16 @@
             "ret_pct": 29.267094533373594,
             "pnl": 43900.64180006039,
             "reason": "Take Profit (+25%)"
+        },
+        {
+            "comp": "Astral (Ancillary)",
+            "entry_date": "2026-07-16 09:00",
+            "exit_date": "2026-09-11 05:15",
+            "entry_price": 1379.8,
+            "exit_price": 1415.3,
+            "ret_pct": 2.422836642991738,
+            "pnl": 3634.2549644876067,
+            "reason": "Trailing Stop (-10%)"
         }
     ]
 }
