@@ -6,7 +6,7 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 1,027,409.57** |
+| **Current Portfolio Value** | **INR 1,038,499.72** |
 | **Available Cash** | INR 123,979.52 |
 | **Total Realized P&L** | INR 23,979.52 (2.40%) |
 | **Win Rate** | 30.8% (13 Trades) |
@@ -14,12 +14,12 @@
 ## Active Positions
 | Date | Company | Entry Price | Target (+25%) | Trailing Stop (-10%) | Current Price | Unrealized P&L |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-07-08 10:17 | **L&T (Main)** | INR 3892.10 | INR 4865.12 | INR 3707.10 | INR 3930.70 | 0.99% |
-| 2026-08-21 09:30 | **EMS Ltd (Main)** | INR 397.75 | INR 497.19 | INR 364.50 | INR 383.10 | -3.68% |
-| 2026-08-27 06:32 | **Stallion India (Chems)** | INR 221.00 | INR 276.25 | INR 210.87 | INR 224.50 | 1.58% |
-| 2026-08-31 06:13 | **NTPC (Main)** | INR 324.90 | INR 406.12 | INR 301.50 | INR 333.40 | 2.62% |
-| 2026-09-09 06:15 | **Thermax (Ancillary)** | INR 3630.50 | INR 4538.12 | INR 3317.85 | INR 3682.00 | 1.42% |
-| 2026-09-11 05:15 | **Tata Elxsi** | INR 3404.80 | INR 4256.00 | INR 3064.32 | INR 3383.00 | -0.64% |
+| 2026-07-08 10:17 | **L&T (Main)** | INR 3892.10 | INR 4865.12 | INR 3707.10 | INR 3955.00 | 1.62% |
+| 2026-08-21 09:30 | **EMS Ltd (Main)** | INR 397.75 | INR 497.19 | INR 364.50 | INR 391.40 | -1.60% |
+| 2026-08-27 06:32 | **Stallion India (Chems)** | INR 221.00 | INR 276.25 | INR 210.87 | INR 234.30 | 6.02% |
+| 2026-08-31 06:13 | **NTPC (Main)** | INR 324.90 | INR 406.12 | INR 301.50 | INR 335.00 | 3.11% |
+| 2026-09-09 06:15 | **Thermax (Ancillary)** | INR 3630.50 | INR 4538.12 | INR 3317.85 | INR 3645.40 | 0.41% |
+| 2026-09-11 05:15 | **Tata Elxsi** | INR 3404.80 | INR 4256.00 | INR 3068.10 | INR 3409.00 | 0.12% |
 
 ## Closed Trade History
 | Entry | Exit | Company | Entry Price | Exit Price | Return % | Realized P&L | Reason |
