@@ -43,9 +43,9 @@
         "Tata Elxsi": {
             "entry_date": "2026-09-11 05:15",
             "entry_price": 3404.8,
-            "highest": 3409.0,
+            "highest": 3507.3,
             "target": 4256.0,
-            "stop": 3068.1
+            "stop": 3156.57
         }
     },
     "closed_trades": [
