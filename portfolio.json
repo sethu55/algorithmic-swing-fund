@@ -1,9 +1,9 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 123979.52115992003,
-    "realized_pnl": 23979.521159919943,
+    "cash": 110460.99507569626,
+    "realized_pnl": 10460.995075696184,
     "trades_won": 4,
-    "trades_lost": 9,
+    "trades_lost": 10,
     "active_positions": {
         "L&T (Main)": {
             "entry_date": "2026-07-08 10:17",
@@ -11,13 +11,6 @@
             "highest": 4119.0,
             "target": 4865.125,
             "stop": 3707.1
-        },
-        "EMS Ltd (Main)": {
-            "entry_date": "2026-08-21 09:30",
-            "entry_price": 397.75,
-            "highest": 405.0,
-            "target": 497.1875,
-            "stop": 364.5
         },
         "Stallion India (Chems)": {
             "entry_date": "2026-08-27 06:32",
@@ -46,6 +39,13 @@
             "highest": 3507.3,
             "target": 4256.0,
             "stop": 3156.57
+        },
+        "Sterling & Wilson (Ancillary)": {
+            "entry_date": "2026-09-16 07:55",
+            "entry_price": 177.81,
+            "highest": 177.81,
+            "target": 222.2625,
+            "stop": 160.029
         }
     },
     "closed_trades": [
@@ -177,6 +177,16 @@
             "exit_price": 1415.3,
             "ret_pct": 2.422836642991738,
             "pnl": 3634.2549644876067,
+            "reason": "Trailing Stop (-10%)"
+        },
+        {
+            "comp": "EMS Ltd (Main)",
+            "entry_date": "2026-08-21 09:30",
+            "exit_date": "2026-09-16 07:55",
+            "entry_price": 397.75,
+            "exit_price": 362.5,
+            "ret_pct": -9.012350722815839,
+            "pnl": -13518.526084223759,
             "reason": "Trailing Stop (-10%)"
         }
     ]
