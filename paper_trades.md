@@ -6,7 +6,7 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 996,210.22** |
+| **Current Portfolio Value** | **INR 997,818.26** |
 | **Available Cash** | INR 110,461.00 |
 | **Total Realized P&L** | INR 10,461.00 (1.05%) |
 | **Win Rate** | 28.6% (14 Trades) |
@@ -15,9 +15,9 @@
 | Date | Company | Entry Price | Target (+25%) | Trailing Stop (-10%) | Current Price | Unrealized P&L |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 2026-07-08 10:17 | **L&T (Main)** | INR 3892.10 | INR 4865.12 | INR 3707.10 | INR 3885.00 | -0.18% |
-| 2026-08-27 06:32 | **Stallion India (Chems)** | INR 221.00 | INR 276.25 | INR 210.87 | INR 218.10 | -1.31% |
+| 2026-08-27 06:32 | **Stallion India (Chems)** | INR 221.00 | INR 276.25 | INR 210.87 | INR 219.55 | -0.66% |
 | 2026-08-31 06:13 | **NTPC (Main)** | INR 324.90 | INR 406.12 | INR 301.50 | INR 323.65 | -0.38% |
-| 2026-09-09 06:15 | **Thermax (Ancillary)** | INR 3630.50 | INR 4538.12 | INR 3317.85 | INR 3536.80 | -2.58% |
+| 2026-09-09 06:15 | **Thermax (Ancillary)** | INR 3630.50 | INR 4538.12 | INR 3317.85 | INR 3551.90 | -2.16% |
 | 2026-09-11 05:15 | **Tata Elxsi** | INR 3404.80 | INR 4256.00 | INR 3156.57 | INR 3266.70 | -4.06% |
 | 2026-09-16 07:55 | **Sterling & Wilson (Ancillary)** | INR 177.81 | INR 222.26 | INR 161.30 | INR 176.06 | -0.98% |
 
