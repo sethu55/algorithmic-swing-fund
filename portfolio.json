@@ -43,9 +43,9 @@
         "Sterling & Wilson (Ancillary)": {
             "entry_date": "2026-09-16 07:55",
             "entry_price": 177.81,
-            "highest": 180.32,
+            "highest": 181.0,
             "target": 222.2625,
-            "stop": 162.288
+            "stop": 162.9
         }
     },
     "closed_trades": [
