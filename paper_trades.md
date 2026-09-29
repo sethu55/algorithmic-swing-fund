@@ -6,7 +6,7 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 977,172.35** |
+| **Current Portfolio Value** | **INR 973,978.50** |
 | **Available Cash** | INR 84,743.84 |
 | **Total Realized P&L** | INR -15,256.16 (-1.53%) |
 | **Win Rate** | 25.0% (16 Trades) |
@@ -16,9 +16,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 2026-07-08 10:17 | **L&T (Main)** | INR 3892.10 | INR 4865.12 | INR 3707.10 | INR 3766.40 | -3.23% |
 | 2026-08-27 06:32 | **Stallion India (Chems)** | INR 221.00 | INR 276.25 | INR 210.87 | INR 221.60 | 0.27% |
-| 2026-08-31 06:13 | **NTPC (Main)** | INR 324.90 | INR 406.12 | INR 301.50 | INR 321.10 | -1.17% |
+| 2026-08-31 06:13 | **NTPC (Main)** | INR 324.90 | INR 406.12 | INR 301.50 | INR 323.50 | -0.43% |
 | 2026-09-16 07:55 | **Sterling & Wilson (Ancillary)** | INR 177.81 | INR 222.26 | INR 162.90 | INR 170.74 | -3.98% |
-| 2026-09-29 09:02 | **Thermax (Ancillary)** | INR 3312.50 | INR 4140.62 | INR 3047.40 | INR 3386.00 | 2.22% |
+| 2026-09-29 09:02 | **Thermax (Ancillary)** | INR 3312.50 | INR 4140.62 | INR 3047.40 | INR 3291.00 | -0.65% |
 | 2026-09-29 09:02 | **Gujarat Fluoro (Ancillary)** | INR 4406.80 | INR 5508.50 | INR 3999.33 | INR 4443.70 | 0.84% |
 
 ## Closed Trade History
