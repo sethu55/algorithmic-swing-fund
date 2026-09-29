@@ -36,16 +36,16 @@
         "Thermax (Ancillary)": {
             "entry_date": "2026-09-29 09:02",
             "entry_price": 3312.5,
-            "highest": 3312.5,
+            "highest": 3386.0,
             "target": 4140.625,
-            "stop": 2981.25
+            "stop": 3047.4
         },
         "Gujarat Fluoro (Ancillary)": {
             "entry_date": "2026-09-29 09:02",
             "entry_price": 4406.8,
-            "highest": 4406.8,
+            "highest": 4443.7,
             "target": 5508.5,
-            "stop": 3966.1200000000003
+            "stop": 3999.33
         }
     },
     "closed_trades": [
