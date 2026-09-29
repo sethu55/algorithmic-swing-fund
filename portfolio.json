@@ -1,9 +1,9 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 110460.99507569626,
-    "realized_pnl": 10460.995075696184,
+    "cash": 84743.84324882063,
+    "realized_pnl": -15256.15675117941,
     "trades_won": 4,
-    "trades_lost": 10,
+    "trades_lost": 12,
     "active_positions": {
         "L&T (Main)": {
             "entry_date": "2026-07-08 10:17",
@@ -26,26 +26,26 @@
             "target": 406.125,
             "stop": 301.5
         },
-        "Thermax (Ancillary)": {
-            "entry_date": "2026-09-09 06:15",
-            "entry_price": 3630.5,
-            "highest": 3686.5,
-            "target": 4538.125,
-            "stop": 3317.85
-        },
-        "Tata Elxsi": {
-            "entry_date": "2026-09-11 05:15",
-            "entry_price": 3404.8,
-            "highest": 3507.3,
-            "target": 4256.0,
-            "stop": 3156.57
-        },
         "Sterling & Wilson (Ancillary)": {
             "entry_date": "2026-09-16 07:55",
             "entry_price": 177.81,
             "highest": 181.0,
             "target": 222.2625,
             "stop": 162.9
+        },
+        "Thermax (Ancillary)": {
+            "entry_date": "2026-09-29 09:02",
+            "entry_price": 3312.5,
+            "highest": 3312.5,
+            "target": 4140.625,
+            "stop": 2981.25
+        },
+        "Gujarat Fluoro (Ancillary)": {
+            "entry_date": "2026-09-29 09:02",
+            "entry_price": 4406.8,
+            "highest": 4406.8,
+            "target": 5508.5,
+            "stop": 3966.1200000000003
         }
     },
     "closed_trades": [
@@ -187,6 +187,26 @@
             "exit_price": 362.5,
             "ret_pct": -9.012350722815839,
             "pnl": -13518.526084223759,
+            "reason": "Trailing Stop (-10%)"
+        },
+        {
+            "comp": "Thermax (Ancillary)",
+            "entry_date": "2026-09-09 06:15",
+            "exit_date": "2026-09-29 09:02",
+            "entry_price": 3630.5,
+            "exit_price": 3312.5,
+            "ret_pct": -8.909124087591241,
+            "pnl": -13363.686131386861,
+            "reason": "Trailing Stop (-10%)"
+        },
+        {
+            "comp": "Tata Elxsi",
+            "entry_date": "2026-09-11 05:15",
+            "exit_date": "2026-09-29 09:02",
+            "entry_price": 3404.8,
+            "exit_price": 3129.5,
+            "ret_pct": -8.235643796992488,
+            "pnl": -12353.465695488732,
             "reason": "Trailing Stop (-10%)"
         }
     ]

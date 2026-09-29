@@ -6,24 +6,26 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 984,468.91** |
-| **Available Cash** | INR 110,461.00 |
-| **Total Realized P&L** | INR 10,461.00 (1.05%) |
-| **Win Rate** | 28.6% (14 Trades) |
+| **Current Portfolio Value** | **INR 973,241.45** |
+| **Available Cash** | INR 84,743.84 |
+| **Total Realized P&L** | INR -15,256.16 (-1.53%) |
+| **Win Rate** | 25.0% (16 Trades) |
 
 ## Active Positions
 | Date | Company | Entry Price | Target (+25%) | Trailing Stop (-10%) | Current Price | Unrealized P&L |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-07-08 10:17 | **L&T (Main)** | INR 3892.10 | INR 4865.12 | INR 3707.10 | INR 3766.40 | -3.23% |
-| 2026-08-27 06:32 | **Stallion India (Chems)** | INR 221.00 | INR 276.25 | INR 210.87 | INR 226.25 | 2.38% |
-| 2026-08-31 06:13 | **NTPC (Main)** | INR 324.90 | INR 406.12 | INR 301.50 | INR 321.10 | -1.17% |
-| 2026-09-09 06:15 | **Thermax (Ancillary)** | INR 3630.50 | INR 4538.12 | INR 3317.85 | INR 3447.20 | -5.05% |
-| 2026-09-11 05:15 | **Tata Elxsi** | INR 3404.80 | INR 4256.00 | INR 3156.57 | INR 3191.00 | -6.28% |
-| 2026-09-16 07:55 | **Sterling & Wilson (Ancillary)** | INR 177.81 | INR 222.26 | INR 162.90 | INR 170.74 | -3.98% |
+| 2026-07-08 10:17 | **L&T (Main)** | INR 3892.10 | INR 4865.12 | INR 3707.10 | INR 3762.20 | -3.34% |
+| 2026-08-27 06:32 | **Stallion India (Chems)** | INR 221.00 | INR 276.25 | INR 210.87 | INR 222.45 | 0.66% |
+| 2026-08-31 06:13 | **NTPC (Main)** | INR 324.90 | INR 406.12 | INR 301.50 | INR 322.00 | -0.89% |
+| 2026-09-16 07:55 | **Sterling & Wilson (Ancillary)** | INR 177.81 | INR 222.26 | INR 162.90 | INR 170.53 | -4.09% |
+| 2026-09-29 09:02 | **Thermax (Ancillary)** | INR 3312.50 | INR 4140.62 | INR 2981.25 | INR 3312.50 | 0.00% |
+| 2026-09-29 09:02 | **Gujarat Fluoro (Ancillary)** | INR 4406.80 | INR 5508.50 | INR 3966.12 | INR 4406.80 | 0.00% |
 
 ## Closed Trade History
 | Entry | Exit | Company | Entry Price | Exit Price | Return % | Realized P&L | Reason |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-09-11 05:15 | 2026-09-29 09:02 | **Tata Elxsi** | INR 3404.80 | INR 3129.50 | -8.24% | INR -12,353.47 | Trailing Stop (-10%) |
+| 2026-09-09 06:15 | 2026-09-29 09:02 | **Thermax (Ancillary)** | INR 3630.50 | INR 3312.50 | -8.91% | INR -13,363.69 | Trailing Stop (-10%) |
 | 2026-08-21 09:30 | 2026-09-16 07:55 | **EMS Ltd (Main)** | INR 397.75 | INR 362.50 | -9.01% | INR -13,518.53 | Trailing Stop (-10%) |
 | 2026-07-16 09:00 | 2026-09-11 05:15 | **Astral (Ancillary)** | INR 1379.80 | INR 1415.30 | 2.42% | INR 3,634.25 | Trailing Stop (-10%) |
 | 2026-07-23 05:41 | 2026-09-09 06:15 | **Graphite India (Ancillary)** | INR 662.20 | INR 857.00 | 29.27% | INR 43,900.64 | Take Profit (+25%) |
@@ -32,5 +34,3 @@
 | 2026-07-21 04:30 | 2026-08-21 09:30 | **Sterling & Wilson (Ancillary)** | INR 209.00 | INR 192.80 | -7.90% | INR -11,851.79 | Trailing Stop (-10%) |
 | 2026-06-08 07:26 | 2026-07-23 08:01 | **Linde India (Gases)** | INR 6923.00 | INR 6710.50 | -3.22% | INR -4,829.22 | Trailing Stop (-10%) |
 | 2026-07-02 08:44 | 2026-07-22 04:32 | **Tata Elxsi** | INR 3675.00 | INR 3403.10 | -7.55% | INR -11,322.96 | Trailing Stop (-10%) |
-| 2026-06-08 07:26 | 2026-07-21 04:30 | **Gujarat Fluoro (Ancillary)** | INR 3528.20 | INR 4418.00 | 25.07% | INR 37,604.49 | Take Profit (+25%) |
-| 2026-06-25 04:32 | 2026-07-16 09:00 | **Vedanta** | INR 274.10 | INR 257.15 | -6.33% | INR -9,500.81 | Trailing Stop (-10%) |
