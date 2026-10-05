@@ -43,9 +43,9 @@
         "BHEL (Main)": {
             "entry_date": "2026-10-01 13:39",
             "entry_price": 421.0,
-            "highest": 421.0,
+            "highest": 428.55,
             "target": 526.25,
-            "stop": 378.90000000000003
+            "stop": 385.695
         }
     },
     "closed_trades": [
