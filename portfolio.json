@@ -36,16 +36,16 @@
         "Gujarat Fluoro (Ancillary)": {
             "entry_date": "2026-09-29 09:02",
             "entry_price": 4406.8,
-            "highest": 4443.7,
+            "highest": 4618.4,
             "target": 5508.5,
-            "stop": 3999.33
+            "stop": 4156.5599999999995
         },
         "BHEL (Main)": {
             "entry_date": "2026-10-01 13:39",
             "entry_price": 421.0,
-            "highest": 429.0,
+            "highest": 452.5,
             "target": 526.25,
-            "stop": 386.1
+            "stop": 407.25
         }
     },
     "closed_trades": [
