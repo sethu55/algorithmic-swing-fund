@@ -6,7 +6,7 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 985,825.87** |
+| **Current Portfolio Value** | **INR 985,576.51** |
 | **Available Cash** | INR 76,861.02 |
 | **Total Realized P&L** | INR -23,138.98 (-2.31%) |
 | **Win Rate** | 23.5% (17 Trades) |
@@ -14,12 +14,12 @@
 ## Active Positions
 | Date | Company | Entry Price | Target (+25%) | Trailing Stop (-10%) | Current Price | Unrealized P&L |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-08-27 06:32 | **Stallion India (Chems)** | INR 221.00 | INR 276.25 | INR 210.87 | INR 223.20 | 1.00% |
-| 2026-08-31 06:13 | **NTPC (Main)** | INR 324.90 | INR 406.12 | INR 301.50 | INR 322.50 | -0.74% |
-| 2026-09-16 07:55 | **Sterling & Wilson (Ancillary)** | INR 177.81 | INR 222.26 | INR 162.90 | INR 171.05 | -3.80% |
-| 2026-09-29 09:02 | **Thermax (Ancillary)** | INR 3312.50 | INR 4140.62 | INR 3052.98 | INR 3221.00 | -2.76% |
-| 2026-09-29 09:02 | **Gujarat Fluoro (Ancillary)** | INR 4406.80 | INR 5508.50 | INR 4156.56 | INR 4618.40 | 4.80% |
-| 2026-10-01 13:39 | **BHEL (Main)** | INR 421.00 | INR 526.25 | INR 407.25 | INR 452.50 | 7.48% |
+| 2026-08-27 06:32 | **Stallion India (Chems)** | INR 221.00 | INR 276.25 | INR 210.87 | INR 223.75 | 1.24% |
+| 2026-08-31 06:13 | **NTPC (Main)** | INR 324.90 | INR 406.12 | INR 301.50 | INR 321.45 | -1.06% |
+| 2026-09-16 07:55 | **Sterling & Wilson (Ancillary)** | INR 177.81 | INR 222.26 | INR 162.90 | INR 172.54 | -2.96% |
+| 2026-09-29 09:02 | **Thermax (Ancillary)** | INR 3312.50 | INR 4140.62 | INR 3052.98 | INR 3225.10 | -2.64% |
+| 2026-09-29 09:02 | **Gujarat Fluoro (Ancillary)** | INR 4406.80 | INR 5508.50 | INR 4156.56 | INR 4577.20 | 3.87% |
+| 2026-10-01 13:39 | **BHEL (Main)** | INR 421.00 | INR 526.25 | INR 407.25 | INR 452.00 | 7.36% |
 
 ## Closed Trade History
 | Entry | Exit | Company | Entry Price | Exit Price | Return % | Realized P&L | Reason |
