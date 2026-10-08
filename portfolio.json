@@ -1,9 +1,9 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 76861.02356278995,
-    "realized_pnl": -23138.97643721008,
+    "cash": 62792.59518418356,
+    "realized_pnl": -37207.40481581645,
     "trades_won": 4,
-    "trades_lost": 13,
+    "trades_lost": 14,
     "active_positions": {
         "Stallion India (Chems)": {
             "entry_date": "2026-08-27 06:32",
@@ -18,13 +18,6 @@
             "highest": 335.0,
             "target": 406.125,
             "stop": 301.5
-        },
-        "Sterling & Wilson (Ancillary)": {
-            "entry_date": "2026-09-16 07:55",
-            "entry_price": 177.81,
-            "highest": 181.0,
-            "target": 222.2625,
-            "stop": 162.9
         },
         "Thermax (Ancillary)": {
             "entry_date": "2026-09-29 09:02",
@@ -46,6 +39,13 @@
             "highest": 452.5,
             "target": 526.25,
             "stop": 407.25
+        },
+        "L&T (Main)": {
+            "entry_date": "2026-10-08 08:55",
+            "entry_price": 3626.1,
+            "highest": 3626.1,
+            "target": 4532.625,
+            "stop": 3263.49
         }
     },
     "closed_trades": [
@@ -217,6 +217,16 @@
             "exit_price": 3693.4,
             "ret_pct": -5.255213124020447,
             "pnl": -7882.819686030671,
+            "reason": "Trailing Stop (-10%)"
+        },
+        {
+            "comp": "Sterling & Wilson (Ancillary)",
+            "entry_date": "2026-09-16 07:55",
+            "exit_date": "2026-10-08 08:55",
+            "entry_price": 177.81,
+            "exit_price": 161.4,
+            "ret_pct": -9.37895225240425,
+            "pnl": -14068.428378606375,
             "reason": "Trailing Stop (-10%)"
         }
     ]
