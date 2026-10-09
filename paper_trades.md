@@ -6,7 +6,7 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 978,021.62** |
+| **Current Portfolio Value** | **INR 960,692.76** |
 | **Available Cash** | INR 62,792.60 |
 | **Total Realized P&L** | INR -37,207.40 (-3.72%) |
 | **Win Rate** | 22.2% (18 Trades) |
@@ -15,11 +15,11 @@
 | Date | Company | Entry Price | Target (+25%) | Trailing Stop (-10%) | Current Price | Unrealized P&L |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 2026-08-27 06:32 | **Stallion India (Chems)** | INR 221.00 | INR 276.25 | INR 210.87 | INR 227.95 | 3.14% |
-| 2026-08-31 06:13 | **NTPC (Main)** | INR 324.90 | INR 406.12 | INR 301.50 | INR 316.75 | -2.51% |
-| 2026-09-29 09:02 | **Thermax (Ancillary)** | INR 3312.50 | INR 4140.62 | INR 3052.98 | INR 3230.40 | -2.48% |
+| 2026-08-31 06:13 | **NTPC (Main)** | INR 324.90 | INR 406.12 | INR 301.50 | INR 309.70 | -4.68% |
+| 2026-09-29 09:02 | **Thermax (Ancillary)** | INR 3312.50 | INR 4140.62 | INR 3052.98 | INR 3138.10 | -5.26% |
 | 2026-09-29 09:02 | **Gujarat Fluoro (Ancillary)** | INR 4406.80 | INR 5508.50 | INR 4156.56 | INR 4555.90 | 3.38% |
-| 2026-10-01 13:39 | **BHEL (Main)** | INR 421.00 | INR 526.25 | INR 407.25 | INR 448.50 | 6.53% |
-| 2026-10-08 08:55 | **L&T (Main)** | INR 3626.10 | INR 4532.62 | INR 3331.35 | INR 3701.50 | 2.08% |
+| 2026-10-01 13:39 | **BHEL (Main)** | INR 421.00 | INR 526.25 | INR 407.25 | INR 429.60 | 2.04% |
+| 2026-10-08 08:55 | **L&T (Main)** | INR 3626.10 | INR 4532.62 | INR 3331.35 | INR 3625.10 | -0.03% |
 
 ## Closed Trade History
 | Entry | Exit | Company | Entry Price | Exit Price | Return % | Realized P&L | Reason |
