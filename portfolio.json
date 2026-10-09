@@ -43,9 +43,9 @@
         "L&T (Main)": {
             "entry_date": "2026-10-08 08:55",
             "entry_price": 3626.1,
-            "highest": 3701.5,
+            "highest": 3703.3,
             "target": 4532.625,
-            "stop": 3331.35
+            "stop": 3332.9700000000003
         }
     },
     "closed_trades": [
