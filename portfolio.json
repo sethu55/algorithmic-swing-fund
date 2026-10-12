@@ -1,17 +1,10 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 62792.59518418356,
-    "realized_pnl": -37207.40481581645,
+    "cash": 53778.00242400257,
+    "realized_pnl": -46221.99757599744,
     "trades_won": 4,
-    "trades_lost": 14,
+    "trades_lost": 15,
     "active_positions": {
-        "Stallion India (Chems)": {
-            "entry_date": "2026-08-27 06:32",
-            "entry_price": 221.0,
-            "highest": 234.3,
-            "target": 276.25,
-            "stop": 210.87
-        },
         "NTPC (Main)": {
             "entry_date": "2026-08-31 06:13",
             "entry_price": 324.9,
@@ -46,6 +39,13 @@
             "highest": 3703.3,
             "target": 4532.625,
             "stop": 3332.9700000000003
+        },
+        "Prince Pipes (Ancillary)": {
+            "entry_date": "2026-10-12 08:44",
+            "entry_price": 265.45,
+            "highest": 265.45,
+            "target": 331.8125,
+            "stop": 238.905
         }
     },
     "closed_trades": [
@@ -227,6 +227,16 @@
             "exit_price": 161.4,
             "ret_pct": -9.37895225240425,
             "pnl": -14068.428378606375,
+            "reason": "Trailing Stop (-10%)"
+        },
+        {
+            "comp": "Stallion India (Chems)",
+            "entry_date": "2026-08-27 06:32",
+            "exit_date": "2026-10-12 08:44",
+            "entry_price": 221.0,
+            "exit_price": 208.05,
+            "ret_pct": -6.009728506787326,
+            "pnl": -9014.592760180989,
             "reason": "Trailing Stop (-10%)"
         }
     ]
