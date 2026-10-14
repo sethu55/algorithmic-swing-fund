@@ -22,16 +22,16 @@
         "Gujarat Fluoro (Ancillary)": {
             "entry_date": "2026-09-29 09:02",
             "entry_price": 4406.8,
-            "highest": 4618.4,
+            "highest": 4633.1,
             "target": 5508.5,
-            "stop": 4156.5599999999995
+            "stop": 4169.790000000001
         },
         "BHEL (Main)": {
             "entry_date": "2026-10-01 13:39",
             "entry_price": 421.0,
-            "highest": 452.5,
+            "highest": 459.2,
             "target": 526.25,
-            "stop": 407.25
+            "stop": 413.28
         },
         "L&T (Main)": {
             "entry_date": "2026-10-08 08:55",
@@ -43,9 +43,9 @@
         "Prince Pipes (Ancillary)": {
             "entry_date": "2026-10-12 08:44",
             "entry_price": 265.45,
-            "highest": 267.15,
+            "highest": 271.4,
             "target": 331.8125,
-            "stop": 240.43499999999997
+            "stop": 244.26
         }
     },
     "closed_trades": [
