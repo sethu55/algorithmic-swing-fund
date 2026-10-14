@@ -6,7 +6,7 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 974,635.71** |
+| **Current Portfolio Value** | **INR 959,425.94** |
 | **Available Cash** | INR 53,778.00 |
 | **Total Realized P&L** | INR -46,222.00 (-4.62%) |
 | **Win Rate** | 21.1% (19 Trades) |
@@ -14,12 +14,12 @@
 ## Active Positions
 | Date | Company | Entry Price | Target (+25%) | Trailing Stop (-10%) | Current Price | Unrealized P&L |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-08-31 06:13 | **NTPC (Main)** | INR 324.90 | INR 406.12 | INR 301.50 | INR 313.70 | -3.45% |
-| 2026-09-29 09:02 | **Thermax (Ancillary)** | INR 3312.50 | INR 4140.62 | INR 3052.98 | INR 3313.30 | 0.02% |
-| 2026-09-29 09:02 | **Gujarat Fluoro (Ancillary)** | INR 4406.80 | INR 5508.50 | INR 4169.79 | INR 4632.10 | 5.11% |
-| 2026-10-01 13:39 | **BHEL (Main)** | INR 421.00 | INR 526.25 | INR 417.60 | INR 464.00 | 10.21% |
-| 2026-10-08 08:55 | **L&T (Main)** | INR 3626.10 | INR 4532.62 | INR 3332.97 | INR 3642.00 | 0.44% |
-| 2026-10-12 08:44 | **Prince Pipes (Ancillary)** | INR 265.45 | INR 331.81 | INR 244.26 | INR 269.60 | 1.56% |
+| 2026-08-31 06:13 | **NTPC (Main)** | INR 324.90 | INR 406.12 | INR 301.50 | INR 311.00 | -4.28% |
+| 2026-09-29 09:02 | **Thermax (Ancillary)** | INR 3312.50 | INR 4140.62 | INR 3052.98 | INR 3298.60 | -0.42% |
+| 2026-09-29 09:02 | **Gujarat Fluoro (Ancillary)** | INR 4406.80 | INR 5508.50 | INR 4169.79 | INR 4550.80 | 3.27% |
+| 2026-10-01 13:39 | **BHEL (Main)** | INR 421.00 | INR 526.25 | INR 417.60 | INR 442.35 | 5.07% |
+| 2026-10-08 08:55 | **L&T (Main)** | INR 3626.10 | INR 4532.62 | INR 3332.97 | INR 3675.00 | 1.35% |
+| 2026-10-12 08:44 | **Prince Pipes (Ancillary)** | INR 265.45 | INR 331.81 | INR 244.26 | INR 262.20 | -1.22% |
 
 ## Closed Trade History
 | Entry | Exit | Company | Entry Price | Exit Price | Return % | Realized P&L | Reason |
