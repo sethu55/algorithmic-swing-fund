@@ -43,9 +43,9 @@
         "Prince Pipes (Ancillary)": {
             "entry_date": "2026-10-12 08:44",
             "entry_price": 265.45,
-            "highest": 271.4,
+            "highest": 273.25,
             "target": 331.8125,
-            "stop": 244.26
+            "stop": 245.925
         }
     },
     "closed_trades": [
