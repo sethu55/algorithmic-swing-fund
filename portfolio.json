@@ -43,9 +43,9 @@
         "Kirloskar Oil (Ancillary)": {
             "entry_date": "2026-10-21 07:34",
             "entry_price": 1914.8,
-            "highest": 1914.8,
+            "highest": 1973.2,
             "target": 2393.5,
-            "stop": 1723.32
+            "stop": 1775.88
         }
     },
     "closed_trades": [
