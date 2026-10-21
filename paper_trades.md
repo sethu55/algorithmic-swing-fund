@@ -6,24 +6,25 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 954,944.65** |
-| **Available Cash** | INR 53,778.00 |
-| **Total Realized P&L** | INR -46,222.00 (-4.62%) |
-| **Win Rate** | 21.1% (19 Trades) |
+| **Current Portfolio Value** | **INR 933,756.13** |
+| **Available Cash** | INR 50,203.83 |
+| **Total Realized P&L** | INR -49,796.17 (-4.98%) |
+| **Win Rate** | 20.0% (20 Trades) |
 
 ## Active Positions
 | Date | Company | Entry Price | Target (+25%) | Trailing Stop (-10%) | Current Price | Unrealized P&L |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-08-31 06:13 | **NTPC (Main)** | INR 324.90 | INR 406.12 | INR 301.50 | INR 309.00 | -4.89% |
-| 2026-09-29 09:02 | **Thermax (Ancillary)** | INR 3312.50 | INR 4140.62 | INR 3052.98 | INR 3234.90 | -2.34% |
-| 2026-09-29 09:02 | **Gujarat Fluoro (Ancillary)** | INR 4406.80 | INR 5508.50 | INR 4169.79 | INR 4454.10 | 1.07% |
-| 2026-10-01 13:39 | **BHEL (Main)** | INR 421.00 | INR 526.25 | INR 417.60 | INR 427.35 | 1.51% |
-| 2026-10-08 08:55 | **L&T (Main)** | INR 3626.10 | INR 4532.62 | INR 3332.97 | INR 3661.90 | 0.99% |
-| 2026-10-12 08:44 | **Prince Pipes (Ancillary)** | INR 265.45 | INR 331.81 | INR 254.12 | INR 277.25 | 4.45% |
+| 2026-08-31 06:13 | **NTPC (Main)** | INR 324.90 | INR 406.12 | INR 301.50 | INR 302.55 | -6.88% |
+| 2026-09-29 09:02 | **Thermax (Ancillary)** | INR 3312.50 | INR 4140.62 | INR 3052.98 | INR 3149.90 | -4.91% |
+| 2026-09-29 09:02 | **Gujarat Fluoro (Ancillary)** | INR 4406.80 | INR 5508.50 | INR 4169.79 | INR 4311.20 | -2.17% |
+| 2026-10-08 08:55 | **L&T (Main)** | INR 3626.10 | INR 4532.62 | INR 3332.97 | INR 3645.80 | 0.54% |
+| 2026-10-12 08:44 | **Prince Pipes (Ancillary)** | INR 265.45 | INR 331.81 | INR 254.12 | INR 271.95 | 2.45% |
+| 2026-10-21 07:34 | **Kirloskar Oil (Ancillary)** | INR 1914.80 | INR 2393.50 | INR 1723.32 | INR 1914.80 | 0.00% |
 
 ## Closed Trade History
 | Entry | Exit | Company | Entry Price | Exit Price | Return % | Realized P&L | Reason |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-10-01 13:39 | 2026-10-21 07:34 | **BHEL (Main)** | INR 421.00 | INR 411.60 | -2.38% | INR -3,574.17 | Trailing Stop (-10%) |
 | 2026-08-27 06:32 | 2026-10-12 08:44 | **Stallion India (Chems)** | INR 221.00 | INR 208.05 | -6.01% | INR -9,014.59 | Trailing Stop (-10%) |
 | 2026-09-16 07:55 | 2026-10-08 08:55 | **Sterling & Wilson (Ancillary)** | INR 177.81 | INR 161.40 | -9.38% | INR -14,068.43 | Trailing Stop (-10%) |
 | 2026-07-08 10:17 | 2026-10-01 13:39 | **L&T (Main)** | INR 3892.10 | INR 3693.40 | -5.26% | INR -7,882.82 | Trailing Stop (-10%) |
@@ -33,4 +34,3 @@
 | 2026-07-16 09:00 | 2026-09-11 05:15 | **Astral (Ancillary)** | INR 1379.80 | INR 1415.30 | 2.42% | INR 3,634.25 | Trailing Stop (-10%) |
 | 2026-07-23 05:41 | 2026-09-09 06:15 | **Graphite India (Ancillary)** | INR 662.20 | INR 857.00 | 29.27% | INR 43,900.64 | Take Profit (+25%) |
 | 2026-07-23 08:01 | 2026-08-31 06:13 | **Linde India (Gases)** | INR 6710.50 | INR 6453.00 | -3.99% | INR -5,980.90 | Trailing Stop (-10%) |
-| 2026-06-06 18:20 | 2026-08-27 06:32 | **NTPC (Main)** | INR 361.65 | INR 330.25 | -8.83% | INR -13,248.64 | Trailing Stop (-10%) |
