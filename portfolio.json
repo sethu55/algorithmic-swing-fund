@@ -1,9 +1,9 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 38667.66110940845,
-    "realized_pnl": -61332.338890591585,
+    "cash": 18179.615188391123,
+    "realized_pnl": -81820.3848116089,
     "trades_won": 4,
-    "trades_lost": 17,
+    "trades_lost": 19,
     "active_positions": {
         "Thermax (Ancillary)": {
             "entry_date": "2026-09-29 09:02",
@@ -12,26 +12,12 @@
             "target": 4140.625,
             "stop": 3052.98
         },
-        "Gujarat Fluoro (Ancillary)": {
-            "entry_date": "2026-09-29 09:02",
-            "entry_price": 4406.8,
-            "highest": 4633.1,
-            "target": 5508.5,
-            "stop": 4169.790000000001
-        },
         "L&T (Main)": {
             "entry_date": "2026-10-08 08:55",
             "entry_price": 3626.1,
             "highest": 3703.3,
             "target": 4532.625,
             "stop": 3332.9700000000003
-        },
-        "Prince Pipes (Ancillary)": {
-            "entry_date": "2026-10-12 08:44",
-            "entry_price": 265.45,
-            "highest": 282.35,
-            "target": 331.8125,
-            "stop": 254.11500000000004
         },
         "Kirloskar Oil (Ancillary)": {
             "entry_date": "2026-10-21 07:34",
@@ -46,6 +32,20 @@
             "highest": 303.0,
             "target": 375.5,
             "stop": 272.7
+        },
+        "Deepak Fertilisers (Ancillary)": {
+            "entry_date": "2026-10-23 05:22",
+            "entry_price": 1125.2,
+            "highest": 1125.2,
+            "target": 1406.5,
+            "stop": 1012.6800000000001
+        },
+        "Dixon Technologies": {
+            "entry_date": "2026-10-23 05:22",
+            "entry_price": 11353.0,
+            "highest": 11353.0,
+            "target": 14191.25,
+            "stop": 10217.7
         }
     },
     "closed_trades": [
@@ -257,6 +257,26 @@
             "exit_price": 300.4,
             "ret_pct": -7.690781779008926,
             "pnl": -11536.172668513389,
+            "reason": "Trailing Stop (-10%)"
+        },
+        {
+            "comp": "Gujarat Fluoro (Ancillary)",
+            "entry_date": "2026-09-29 09:02",
+            "exit_date": "2026-10-23 05:22",
+            "entry_price": 4406.8,
+            "exit_price": 4099.5,
+            "ret_pct": -7.1233139693201455,
+            "pnl": -10684.970953980219,
+            "reason": "Trailing Stop (-10%)"
+        },
+        {
+            "comp": "Prince Pipes (Ancillary)",
+            "entry_date": "2026-10-12 08:44",
+            "exit_date": "2026-10-23 05:22",
+            "entry_price": 265.45,
+            "exit_price": 248.5,
+            "ret_pct": -6.535383311358068,
+            "pnl": -9803.0749670371,
             "reason": "Trailing Stop (-10%)"
         }
     ]
