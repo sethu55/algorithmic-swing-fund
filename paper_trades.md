@@ -6,7 +6,7 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 933,460.31** |
+| **Current Portfolio Value** | **INR 933,355.72** |
 | **Available Cash** | INR 38,667.66 |
 | **Total Realized P&L** | INR -61,332.34 (-6.13%) |
 | **Win Rate** | 19.0% (21 Trades) |
@@ -16,10 +16,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 2026-09-29 09:02 | **Thermax (Ancillary)** | INR 3312.50 | INR 4140.62 | INR 3052.98 | INR 3145.00 | -5.06% |
 | 2026-09-29 09:02 | **Gujarat Fluoro (Ancillary)** | INR 4406.80 | INR 5508.50 | INR 4169.79 | INR 4368.30 | -0.87% |
-| 2026-10-08 08:55 | **L&T (Main)** | INR 3626.10 | INR 4532.62 | INR 3332.97 | INR 3636.00 | 0.27% |
+| 2026-10-08 08:55 | **L&T (Main)** | INR 3626.10 | INR 4532.62 | INR 3332.97 | INR 3638.30 | 0.34% |
 | 2026-10-12 08:44 | **Prince Pipes (Ancillary)** | INR 265.45 | INR 331.81 | INR 254.12 | INR 269.80 | 1.64% |
 | 2026-10-21 07:34 | **Kirloskar Oil (Ancillary)** | INR 1914.80 | INR 2393.50 | INR 1775.88 | INR 1908.70 | -0.32% |
-| 2026-10-22 04:46 | **NTPC (Main)** | INR 300.40 | INR 375.50 | INR 272.70 | INR 303.00 | 0.87% |
+| 2026-10-22 04:46 | **NTPC (Main)** | INR 300.40 | INR 375.50 | INR 272.70 | INR 302.60 | 0.73% |
 
 ## Closed Trade History
 | Entry | Exit | Company | Entry Price | Exit Price | Return % | Realized P&L | Reason |
