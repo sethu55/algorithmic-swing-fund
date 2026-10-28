@@ -6,7 +6,7 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 906,809.32** |
+| **Current Portfolio Value** | **INR 906,517.01** |
 | **Available Cash** | INR 18,179.62 |
 | **Total Realized P&L** | INR -81,820.38 (-8.18%) |
 | **Win Rate** | 17.4% (23 Trades) |
@@ -14,12 +14,12 @@
 ## Active Positions
 | Date | Company | Entry Price | Target (+25%) | Trailing Stop (-10%) | Current Price | Unrealized P&L |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-09-29 09:02 | **Thermax (Ancillary)** | INR 3312.50 | INR 4140.62 | INR 3052.98 | INR 3187.00 | -3.79% |
-| 2026-10-08 08:55 | **L&T (Main)** | INR 3626.10 | INR 4532.62 | INR 3332.97 | INR 3680.00 | 1.49% |
+| 2026-09-29 09:02 | **Thermax (Ancillary)** | INR 3312.50 | INR 4140.62 | INR 3052.98 | INR 3153.30 | -4.81% |
+| 2026-10-08 08:55 | **L&T (Main)** | INR 3626.10 | INR 4532.62 | INR 3332.97 | INR 3665.10 | 1.08% |
 | 2026-10-21 07:34 | **Kirloskar Oil (Ancillary)** | INR 1914.80 | INR 2393.50 | INR 1775.88 | INR 1819.40 | -4.98% |
-| 2026-10-22 04:46 | **NTPC (Main)** | INR 300.40 | INR 375.50 | INR 272.70 | INR 300.00 | -0.13% |
+| 2026-10-22 04:46 | **NTPC (Main)** | INR 300.40 | INR 375.50 | INR 272.70 | INR 301.80 | 0.47% |
 | 2026-10-23 05:22 | **Deepak Fertilisers (Ancillary)** | INR 1125.20 | INR 1406.50 | INR 1066.05 | INR 1142.40 | 1.53% |
-| 2026-10-23 05:22 | **Dixon Technologies** | INR 11353.00 | INR 14191.25 | INR 10434.60 | INR 11161.00 | -1.69% |
+| 2026-10-23 05:22 | **Dixon Technologies** | INR 11353.00 | INR 14191.25 | INR 10434.60 | INR 11233.00 | -1.06% |
 
 ## Closed Trade History
 | Entry | Exit | Company | Entry Price | Exit Price | Return % | Realized P&L | Reason |
