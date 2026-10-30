@@ -15,9 +15,9 @@
         "L&T (Main)": {
             "entry_date": "2026-10-08 08:55",
             "entry_price": 3626.1,
-            "highest": 3837.1,
+            "highest": 3845.7,
             "target": 4532.625,
-            "stop": 3453.39
+            "stop": 3461.13
         },
         "Kirloskar Oil (Ancillary)": {
             "entry_date": "2026-10-21 07:34",
@@ -29,9 +29,9 @@
         "NTPC (Main)": {
             "entry_date": "2026-10-22 04:46",
             "entry_price": 300.4,
-            "highest": 310.5,
+            "highest": 314.6,
             "target": 375.5,
-            "stop": 279.45
+            "stop": 283.14000000000004
         },
         "Deepak Fertilisers (Ancillary)": {
             "entry_date": "2026-10-23 05:22",
