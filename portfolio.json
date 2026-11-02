@@ -1,9 +1,9 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 18179.615188391123,
-    "realized_pnl": -81820.3848116089,
+    "cash": 3101.889055113512,
+    "realized_pnl": -96898.11094488653,
     "trades_won": 4,
-    "trades_lost": 19,
+    "trades_lost": 20,
     "active_positions": {
         "Thermax (Ancillary)": {
             "entry_date": "2026-09-29 09:02",
@@ -15,23 +15,16 @@
         "L&T (Main)": {
             "entry_date": "2026-10-08 08:55",
             "entry_price": 3626.1,
-            "highest": 3871.7,
+            "highest": 3915.0,
             "target": 4532.625,
-            "stop": 3484.5299999999997
-        },
-        "Kirloskar Oil (Ancillary)": {
-            "entry_date": "2026-10-21 07:34",
-            "entry_price": 1914.8,
-            "highest": 1973.2,
-            "target": 2393.5,
-            "stop": 1775.88
+            "stop": 3523.5
         },
         "NTPC (Main)": {
             "entry_date": "2026-10-22 04:46",
             "entry_price": 300.4,
-            "highest": 316.25,
+            "highest": 323.6,
             "target": 375.5,
-            "stop": 284.625
+            "stop": 291.24
         },
         "Deepak Fertilisers (Ancillary)": {
             "entry_date": "2026-10-23 05:22",
@@ -43,9 +36,16 @@
         "Dixon Technologies": {
             "entry_date": "2026-10-23 05:22",
             "entry_price": 11353.0,
-            "highest": 11594.0,
+            "highest": 12350.0,
             "target": 14191.25,
-            "stop": 10434.6
+            "stop": 11115.0
+        },
+        "VA Tech Wabag (Main)": {
+            "entry_date": "2026-11-02 09:10",
+            "entry_price": 1824.1,
+            "highest": 1824.1,
+            "target": 2280.125,
+            "stop": 1641.69
         }
     },
     "closed_trades": [
@@ -277,6 +277,16 @@
             "exit_price": 248.5,
             "ret_pct": -6.535383311358068,
             "pnl": -9803.0749670371,
+            "reason": "Trailing Stop (-10%)"
+        },
+        {
+            "comp": "Kirloskar Oil (Ancillary)",
+            "entry_date": "2026-10-21 07:34",
+            "exit_date": "2026-11-02 09:10",
+            "entry_price": 1914.8,
+            "exit_price": 1725.2,
+            "ret_pct": -10.051817422185081,
+            "pnl": -15077.726133277623,
             "reason": "Trailing Stop (-10%)"
         }
     ]
