@@ -1,9 +1,9 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 3101.889055113512,
-    "realized_pnl": -96898.11094488653,
+    "cash": 148212.923583432,
+    "realized_pnl": -101787.07641656803,
     "trades_won": 4,
-    "trades_lost": 20,
+    "trades_lost": 21,
     "active_positions": {
         "Thermax (Ancillary)": {
             "entry_date": "2026-09-29 09:02",
@@ -32,13 +32,6 @@
             "highest": 1184.5,
             "target": 1406.5,
             "stop": 1066.05
-        },
-        "Dixon Technologies": {
-            "entry_date": "2026-10-23 05:22",
-            "entry_price": 11353.0,
-            "highest": 12350.0,
-            "target": 14191.25,
-            "stop": 11115.0
         },
         "VA Tech Wabag (Main)": {
             "entry_date": "2026-11-02 09:10",
@@ -287,6 +280,16 @@
             "exit_price": 1725.2,
             "ret_pct": -10.051817422185081,
             "pnl": -15077.726133277623,
+            "reason": "Trailing Stop (-10%)"
+        },
+        {
+            "comp": "Dixon Technologies",
+            "entry_date": "2026-10-23 05:22",
+            "exit_date": "2026-11-02 19:28",
+            "entry_price": 11353.0,
+            "exit_price": 11000.0,
+            "ret_pct": -3.259310314454329,
+            "pnl": -4888.965471681494,
             "reason": "Trailing Stop (-10%)"
         }
     ]

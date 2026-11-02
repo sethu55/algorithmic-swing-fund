@@ -6,24 +6,24 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 934,275.89** |
-| **Available Cash** | INR 3,101.89 |
-| **Total Realized P&L** | INR -96,898.11 (-9.69%) |
-| **Win Rate** | 16.7% (24 Trades) |
+| **Current Portfolio Value** | **INR 902,913.78** |
+| **Available Cash** | INR 148,212.92 |
+| **Total Realized P&L** | INR -101,787.08 (-10.18%) |
+| **Win Rate** | 16.0% (25 Trades) |
 
 ## Active Positions
 | Date | Company | Entry Price | Target (+25%) | Trailing Stop (-10%) | Current Price | Unrealized P&L |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-09-29 09:02 | **Thermax (Ancillary)** | INR 3312.50 | INR 4140.62 | INR 3052.98 | INR 3121.40 | -5.77% |
-| 2026-10-08 08:55 | **L&T (Main)** | INR 3626.10 | INR 4532.62 | INR 3523.50 | INR 3915.00 | 7.97% |
-| 2026-10-22 04:46 | **NTPC (Main)** | INR 300.40 | INR 375.50 | INR 291.24 | INR 323.60 | 7.72% |
-| 2026-10-23 05:22 | **Deepak Fertilisers (Ancillary)** | INR 1125.20 | INR 1406.50 | INR 1066.05 | INR 1148.60 | 2.08% |
-| 2026-10-23 05:22 | **Dixon Technologies** | INR 11353.00 | INR 14191.25 | INR 11115.00 | INR 12350.00 | 8.78% |
-| 2026-11-02 09:10 | **VA Tech Wabag (Main)** | INR 1824.10 | INR 2280.12 | INR 1641.69 | INR 1824.10 | 0.00% |
+| 2026-09-29 09:02 | **Thermax (Ancillary)** | INR 3312.50 | INR 4140.62 | INR 3052.98 | INR 3112.20 | -6.05% |
+| 2026-10-08 08:55 | **L&T (Main)** | INR 3626.10 | INR 4532.62 | INR 3523.50 | INR 3871.70 | 6.77% |
+| 2026-10-22 04:46 | **NTPC (Main)** | INR 300.40 | INR 375.50 | INR 291.24 | INR 316.25 | 5.28% |
+| 2026-10-23 05:22 | **Deepak Fertilisers (Ancillary)** | INR 1125.20 | INR 1406.50 | INR 1066.05 | INR 1100.20 | -2.22% |
+| 2026-11-02 09:10 | **VA Tech Wabag (Main)** | INR 1824.10 | INR 2280.12 | INR 1641.69 | INR 1812.30 | -0.65% |
 
 ## Closed Trade History
 | Entry | Exit | Company | Entry Price | Exit Price | Return % | Realized P&L | Reason |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-10-23 05:22 | 2026-11-02 19:28 | **Dixon Technologies** | INR 11353.00 | INR 11000.00 | -3.26% | INR -4,888.97 | Trailing Stop (-10%) |
 | 2026-10-21 07:34 | 2026-11-02 09:10 | **Kirloskar Oil (Ancillary)** | INR 1914.80 | INR 1725.20 | -10.05% | INR -15,077.73 | Trailing Stop (-10%) |
 | 2026-10-12 08:44 | 2026-10-23 05:22 | **Prince Pipes (Ancillary)** | INR 265.45 | INR 248.50 | -6.54% | INR -9,803.07 | Trailing Stop (-10%) |
 | 2026-09-29 09:02 | 2026-10-23 05:22 | **Gujarat Fluoro (Ancillary)** | INR 4406.80 | INR 4099.50 | -7.12% | INR -10,684.97 | Trailing Stop (-10%) |
@@ -33,4 +33,3 @@
 | 2026-09-16 07:55 | 2026-10-08 08:55 | **Sterling & Wilson (Ancillary)** | INR 177.81 | INR 161.40 | -9.38% | INR -14,068.43 | Trailing Stop (-10%) |
 | 2026-07-08 10:17 | 2026-10-01 13:39 | **L&T (Main)** | INR 3892.10 | INR 3693.40 | -5.26% | INR -7,882.82 | Trailing Stop (-10%) |
 | 2026-09-11 05:15 | 2026-09-29 09:02 | **Tata Elxsi** | INR 3404.80 | INR 3129.50 | -8.24% | INR -12,353.47 | Trailing Stop (-10%) |
-| 2026-09-09 06:15 | 2026-09-29 09:02 | **Thermax (Ancillary)** | INR 3630.50 | INR 3312.50 | -8.91% | INR -13,363.69 | Trailing Stop (-10%) |
