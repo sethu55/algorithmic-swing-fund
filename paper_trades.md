@@ -6,7 +6,7 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 926,107.32** |
+| **Current Portfolio Value** | **INR 912,781.33** |
 | **Available Cash** | INR 148,212.92 |
 | **Total Realized P&L** | INR -101,787.08 (-10.18%) |
 | **Win Rate** | 16.0% (25 Trades) |
@@ -14,11 +14,11 @@
 ## Active Positions
 | Date | Company | Entry Price | Target (+25%) | Trailing Stop (-10%) | Current Price | Unrealized P&L |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-09-29 09:02 | **Thermax (Ancillary)** | INR 3312.50 | INR 4140.62 | INR 3052.98 | INR 3282.30 | -0.91% |
-| 2026-10-08 08:55 | **L&T (Main)** | INR 3626.10 | INR 4532.62 | INR 3553.38 | INR 3944.40 | 8.78% |
-| 2026-10-22 04:46 | **NTPC (Main)** | INR 300.40 | INR 375.50 | INR 291.24 | INR 321.95 | 7.17% |
-| 2026-10-23 05:22 | **Deepak Fertilisers (Ancillary)** | INR 1125.20 | INR 1406.50 | INR 1066.05 | INR 1146.40 | 1.88% |
-| 2026-11-02 09:10 | **VA Tech Wabag (Main)** | INR 1824.10 | INR 2280.12 | INR 1673.64 | INR 1854.60 | 1.67% |
+| 2026-09-29 09:02 | **Thermax (Ancillary)** | INR 3312.50 | INR 4140.62 | INR 3052.98 | INR 3151.20 | -4.87% |
+| 2026-10-08 08:55 | **L&T (Main)** | INR 3626.10 | INR 4532.62 | INR 3553.38 | INR 3948.20 | 8.88% |
+| 2026-10-22 04:46 | **NTPC (Main)** | INR 300.40 | INR 375.50 | INR 291.24 | INR 321.55 | 7.04% |
+| 2026-10-23 05:22 | **Deepak Fertilisers (Ancillary)** | INR 1125.20 | INR 1406.50 | INR 1066.05 | INR 1128.30 | 0.28% |
+| 2026-11-02 09:10 | **VA Tech Wabag (Main)** | INR 1824.10 | INR 2280.12 | INR 1673.64 | INR 1794.60 | -1.62% |
 
 ## Closed Trade History
 | Entry | Exit | Company | Entry Price | Exit Price | Return % | Realized P&L | Reason |
