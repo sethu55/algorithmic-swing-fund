@@ -36,9 +36,9 @@
         "VA Tech Wabag (Main)": {
             "entry_date": "2026-11-02 09:10",
             "entry_price": 1824.1,
-            "highest": 1827.1,
+            "highest": 1859.6,
             "target": 2280.125,
-            "stop": 1644.3899999999999
+            "stop": 1673.6399999999999
         }
     },
     "closed_trades": [
