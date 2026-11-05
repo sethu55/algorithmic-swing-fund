@@ -15,9 +15,9 @@
         "L&T (Main)": {
             "entry_date": "2026-10-08 08:55",
             "entry_price": 3626.1,
-            "highest": 3948.2,
+            "highest": 4050.0,
             "target": 4532.625,
-            "stop": 3553.38
+            "stop": 3645.0
         },
         "NTPC (Main)": {
             "entry_date": "2026-10-22 04:46",
@@ -36,9 +36,9 @@
         "VA Tech Wabag (Main)": {
             "entry_date": "2026-11-02 09:10",
             "entry_price": 1824.1,
-            "highest": 1859.6,
+            "highest": 1865.6,
             "target": 2280.125,
-            "stop": 1673.6399999999999
+            "stop": 1679.04
         }
     },
     "closed_trades": [
