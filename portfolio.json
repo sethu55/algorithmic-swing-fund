@@ -36,9 +36,9 @@
         "Thermax (Ancillary)": {
             "entry_date": "2026-11-06 11:29",
             "entry_price": 2746.3,
-            "highest": 2746.3,
+            "highest": 3319.7,
             "target": 3432.875,
-            "stop": 2471.67
+            "stop": 2987.73
         }
     },
     "closed_trades": [
