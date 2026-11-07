@@ -1,9 +1,9 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 122348.67830041319,
-    "realized_pnl": -127651.32169958689,
+    "cash": 122123.67830041319,
+    "realized_pnl": -127876.32169958689,
     "trades_won": 4,
-    "trades_lost": 22,
+    "trades_lost": 23,
     "active_positions": {
         "L&T (Main)": {
             "entry_date": "2026-10-08 08:55",
@@ -34,11 +34,11 @@
             "stop": 1789.38
         },
         "Thermax (Ancillary)": {
-            "entry_date": "2026-11-06 11:29",
+            "entry_date": "2026-11-07 09:41",
             "entry_price": 2746.3,
-            "highest": 3319.7,
+            "highest": 2746.3,
             "target": 3432.875,
-            "stop": 2987.73
+            "stop": 2471.67
         }
     },
     "closed_trades": [
@@ -300,6 +300,16 @@
             "exit_price": 2746.3,
             "ret_pct": -17.24283018867924,
             "pnl": -25864.24528301886,
+            "reason": "Trailing Stop (-10%)"
+        },
+        {
+            "comp": "Thermax (Ancillary)",
+            "entry_date": "2026-11-06 11:29",
+            "exit_date": "2026-11-07 09:41",
+            "entry_price": 2746.3,
+            "exit_price": 2746.3,
+            "ret_pct": -0.15,
+            "pnl": -225.0,
             "reason": "Trailing Stop (-10%)"
         }
     ]
