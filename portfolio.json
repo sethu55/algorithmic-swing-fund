@@ -29,16 +29,16 @@
         "VA Tech Wabag (Main)": {
             "entry_date": "2026-11-02 09:10",
             "entry_price": 1824.1,
-            "highest": 1988.2,
+            "highest": 2007.6,
             "target": 2280.125,
-            "stop": 1789.38
+            "stop": 1806.84
         },
         "Thermax (Ancillary)": {
             "entry_date": "2026-11-07 09:41",
             "entry_price": 2746.3,
-            "highest": 2746.3,
+            "highest": 2839.8,
             "target": 3432.875,
-            "stop": 2471.67
+            "stop": 2555.82
         }
     },
     "closed_trades": [
