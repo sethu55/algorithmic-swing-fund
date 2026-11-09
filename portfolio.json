@@ -8,16 +8,16 @@
         "L&T (Main)": {
             "entry_date": "2026-10-08 08:55",
             "entry_price": 3626.1,
-            "highest": 4117.7,
+            "highest": 4185.0,
             "target": 4532.625,
-            "stop": 3705.93
+            "stop": 3766.5
         },
         "NTPC (Main)": {
             "entry_date": "2026-10-22 04:46",
             "entry_price": 300.4,
-            "highest": 323.6,
+            "highest": 328.75,
             "target": 375.5,
-            "stop": 291.24
+            "stop": 295.875
         },
         "Deepak Fertilisers (Ancillary)": {
             "entry_date": "2026-10-23 05:22",
