@@ -6,7 +6,7 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 951,026.30** |
+| **Current Portfolio Value** | **INR 952,480.04** |
 | **Available Cash** | INR 314,357.80 |
 | **Total Realized P&L** | INR -85,642.20 (-8.56%) |
 | **Win Rate** | 17.9% (28 Trades) |
@@ -14,10 +14,10 @@
 ## Active Positions
 | Date | Company | Entry Price | Target (+25%) | Trailing Stop (-10%) | Current Price | Unrealized P&L |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-10-08 08:55 | **L&T (Main)** | INR 3626.10 | INR 4532.62 | INR 3802.86 | INR 4155.50 | 14.60% |
-| 2026-10-22 04:46 | **NTPC (Main)** | INR 300.40 | INR 375.50 | INR 298.08 | INR 321.80 | 7.12% |
-| 2026-11-02 09:10 | **VA Tech Wabag (Main)** | INR 1824.10 | INR 2280.12 | INR 1877.22 | INR 1879.40 | 3.03% |
-| 2026-11-07 09:41 | **Thermax (Ancillary)** | INR 2746.30 | INR 3432.88 | INR 2555.82 | INR 2737.80 | -0.31% |
+| 2026-10-08 08:55 | **L&T (Main)** | INR 3626.10 | INR 4532.62 | INR 3802.86 | INR 4140.00 | 14.17% |
+| 2026-10-22 04:46 | **NTPC (Main)** | INR 300.40 | INR 375.50 | INR 298.08 | INR 321.25 | 6.94% |
+| 2026-11-02 09:10 | **VA Tech Wabag (Main)** | INR 1824.10 | INR 2280.12 | INR 1877.22 | INR 1894.40 | 3.85% |
+| 2026-11-07 09:41 | **Thermax (Ancillary)** | INR 2746.30 | INR 3432.88 | INR 2555.82 | INR 2758.60 | 0.45% |
 
 ## Closed Trade History
 | Entry | Exit | Company | Entry Price | Exit Price | Return % | Realized P&L | Reason |
