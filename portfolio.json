@@ -1,8 +1,8 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 122123.67830041319,
-    "realized_pnl": -127876.32169958689,
-    "trades_won": 4,
+    "cash": 314357.796679368,
+    "realized_pnl": -85642.20332063203,
+    "trades_won": 5,
     "trades_lost": 23,
     "active_positions": {
         "L&T (Main)": {
@@ -18,13 +18,6 @@
             "highest": 331.2,
             "target": 375.5,
             "stop": 298.08
-        },
-        "Deepak Fertilisers (Ancillary)": {
-            "entry_date": "2026-10-23 05:22",
-            "entry_price": 1125.2,
-            "highest": 1352.8,
-            "target": 1406.5,
-            "stop": 1217.52
         },
         "VA Tech Wabag (Main)": {
             "entry_date": "2026-11-02 09:10",
@@ -311,6 +304,16 @@
             "ret_pct": -0.15,
             "pnl": -225.0,
             "reason": "Trailing Stop (-10%)"
+        },
+        {
+            "comp": "Deepak Fertilisers (Ancillary)",
+            "entry_date": "2026-10-23 05:22",
+            "exit_date": "2026-11-17 10:10",
+            "entry_price": 1125.2,
+            "exit_price": 1443.7,
+            "ret_pct": 28.156078919303237,
+            "pnl": 42234.11837895485,
+            "reason": "Take Profit (+25%)"
         }
     ]
 }
