@@ -1,8 +1,8 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 314357.796679368,
-    "realized_pnl": -85642.20332063203,
-    "trades_won": 5,
+    "cash": 467808.58199815534,
+    "realized_pnl": -82191.41800184468,
+    "trades_won": 6,
     "trades_lost": 23,
     "active_positions": {
         "L&T (Main)": {
@@ -18,13 +18,6 @@
             "highest": 331.2,
             "target": 375.5,
             "stop": 298.08
-        },
-        "VA Tech Wabag (Main)": {
-            "entry_date": "2026-11-02 09:10",
-            "entry_price": 1824.1,
-            "highest": 2085.8,
-            "target": 2280.125,
-            "stop": 1877.2200000000003
         },
         "Thermax (Ancillary)": {
             "entry_date": "2026-11-07 09:41",
@@ -314,6 +307,16 @@
             "ret_pct": 28.156078919303237,
             "pnl": 42234.11837895485,
             "reason": "Take Profit (+25%)"
+        },
+        {
+            "comp": "VA Tech Wabag (Main)",
+            "entry_date": "2026-11-02 09:10",
+            "exit_date": "2026-11-18 09:06",
+            "entry_price": 1824.1,
+            "exit_price": 1868.8,
+            "ret_pct": 2.3005235458582343,
+            "pnl": 3450.785318787351,
+            "reason": "Trailing Stop (-10%)"
         }
     ]
 }
