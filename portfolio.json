@@ -1,6 +1,6 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 317808.58199815534,
+    "cash": 167808.58199815534,
     "realized_pnl": -82191.41800184468,
     "trades_won": 6,
     "trades_lost": 23,
@@ -29,9 +29,16 @@
         "BHEL (Main)": {
             "entry_date": "2026-11-19 07:18",
             "entry_price": 430.25,
-            "highest": 430.25,
+            "highest": 435.0,
             "target": 537.8125,
-            "stop": 387.225
+            "stop": 391.5
+        },
+        "Ion Exchange (Main)": {
+            "entry_date": "2026-11-19 16:41",
+            "entry_price": 304.6,
+            "highest": 304.6,
+            "target": 380.75,
+            "stop": 274.14000000000004
         }
     },
     "closed_trades": [
