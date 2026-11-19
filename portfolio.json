@@ -1,6 +1,6 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 467808.58199815534,
+    "cash": 317808.58199815534,
     "realized_pnl": -82191.41800184468,
     "trades_won": 6,
     "trades_lost": 23,
@@ -25,6 +25,13 @@
             "highest": 2839.8,
             "target": 3432.875,
             "stop": 2555.82
+        },
+        "BHEL (Main)": {
+            "entry_date": "2026-11-19 07:18",
+            "entry_price": 430.25,
+            "highest": 430.25,
+            "target": 537.8125,
+            "stop": 387.225
         }
     },
     "closed_trades": [
