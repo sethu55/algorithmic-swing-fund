@@ -6,7 +6,7 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 942,837.95** |
+| **Current Portfolio Value** | **INR 943,390.02** |
 | **Available Cash** | INR 167,808.58 |
 | **Total Realized P&L** | INR -82,191.42 (-8.22%) |
 | **Win Rate** | 20.7% (29 Trades) |
@@ -14,11 +14,11 @@
 ## Active Positions
 | Date | Company | Entry Price | Target (+25%) | Trailing Stop (-10%) | Current Price | Unrealized P&L |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-10-08 08:55 | **L&T (Main)** | INR 3626.10 | INR 4532.62 | INR 3802.86 | INR 4159.00 | 14.70% |
-| 2026-10-22 04:46 | **NTPC (Main)** | INR 300.40 | INR 375.50 | INR 298.08 | INR 320.40 | 6.66% |
-| 2026-11-07 09:41 | **Thermax (Ancillary)** | INR 2746.30 | INR 3432.88 | INR 2555.82 | INR 2681.70 | -2.35% |
-| 2026-11-19 07:18 | **BHEL (Main)** | INR 430.25 | INR 537.81 | INR 391.50 | INR 421.70 | -1.99% |
-| 2026-11-19 16:41 | **Ion Exchange (Main)** | INR 304.60 | INR 380.75 | INR 274.14 | INR 303.60 | -0.33% |
+| 2026-10-08 08:55 | **L&T (Main)** | INR 3626.10 | INR 4532.62 | INR 3802.86 | INR 4161.00 | 14.75% |
+| 2026-10-22 04:46 | **NTPC (Main)** | INR 300.40 | INR 375.50 | INR 298.08 | INR 320.70 | 6.76% |
+| 2026-11-07 09:41 | **Thermax (Ancillary)** | INR 2746.30 | INR 3432.88 | INR 2555.82 | INR 2708.10 | -1.39% |
+| 2026-11-19 07:18 | **BHEL (Main)** | INR 430.25 | INR 537.81 | INR 391.50 | INR 427.45 | -0.65% |
+| 2026-11-19 16:41 | **Ion Exchange (Main)** | INR 304.60 | INR 380.75 | INR 274.14 | INR 297.25 | -2.41% |
 
 ## Closed Trade History
 | Entry | Exit | Company | Entry Price | Exit Price | Return % | Realized P&L | Reason |
