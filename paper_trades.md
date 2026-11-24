@@ -6,7 +6,7 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 928,904.47** |
+| **Current Portfolio Value** | **INR 928,216.27** |
 | **Available Cash** | INR 17,808.58 |
 | **Total Realized P&L** | INR -82,191.42 (-8.22%) |
 | **Win Rate** | 20.7% (29 Trades) |
@@ -16,7 +16,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 2026-10-08 08:55 | **L&T (Main)** | INR 3626.10 | INR 4532.62 | INR 3802.86 | INR 4099.90 | 13.07% |
 | 2026-10-22 04:46 | **NTPC (Main)** | INR 300.40 | INR 375.50 | INR 298.08 | INR 315.45 | 5.01% |
-| 2026-11-07 09:41 | **Thermax (Ancillary)** | INR 2746.30 | INR 3432.88 | INR 2555.82 | INR 2718.10 | -1.03% |
+| 2026-11-07 09:41 | **Thermax (Ancillary)** | INR 2746.30 | INR 3432.88 | INR 2555.82 | INR 2705.50 | -1.49% |
 | 2026-11-19 07:18 | **BHEL (Main)** | INR 430.25 | INR 537.81 | INR 391.50 | INR 415.70 | -3.38% |
 | 2026-11-19 16:41 | **Ion Exchange (Main)** | INR 304.60 | INR 380.75 | INR 274.14 | INR 285.50 | -6.27% |
 | 2026-11-23 11:49 | **Graphite India (Ancillary)** | INR 789.90 | INR 987.38 | INR 710.91 | INR 789.90 | 0.00% |
