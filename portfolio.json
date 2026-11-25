@@ -43,9 +43,9 @@
         "Kaynes Technology": {
             "entry_date": "2026-11-25 11:57",
             "entry_price": 2698.0,
-            "highest": 2698.0,
+            "highest": 2809.0,
             "target": 3372.5,
-            "stop": 2428.2000000000003
+            "stop": 2528.1
         }
     },
     "closed_trades": [
