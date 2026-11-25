@@ -1,9 +1,9 @@
 {
     "starting_balance": 1000000.0,
-    "cash": 17808.581998155336,
-    "realized_pnl": -82191.41800184468,
+    "cash": 1751.342996185529,
+    "realized_pnl": -98248.65700381449,
     "trades_won": 6,
-    "trades_lost": 23,
+    "trades_lost": 24,
     "active_positions": {
         "L&T (Main)": {
             "entry_date": "2026-10-08 08:55",
@@ -33,19 +33,19 @@
             "target": 537.8125,
             "stop": 391.5
         },
-        "Ion Exchange (Main)": {
-            "entry_date": "2026-11-19 16:41",
-            "entry_price": 304.6,
-            "highest": 304.6,
-            "target": 380.75,
-            "stop": 274.14000000000004
-        },
         "Graphite India (Ancillary)": {
             "entry_date": "2026-11-23 11:49",
             "entry_price": 789.9,
-            "highest": 789.9,
+            "highest": 794.45,
             "target": 987.375,
-            "stop": 710.91
+            "stop": 715.0050000000001
+        },
+        "Kaynes Technology": {
+            "entry_date": "2026-11-25 11:57",
+            "entry_price": 2698.0,
+            "highest": 2698.0,
+            "target": 3372.5,
+            "stop": 2428.2000000000003
         }
     },
     "closed_trades": [
@@ -337,6 +337,16 @@
             "exit_price": 1868.8,
             "ret_pct": 2.3005235458582343,
             "pnl": 3450.785318787351,
+            "reason": "Trailing Stop (-10%)"
+        },
+        {
+            "comp": "Ion Exchange (Main)",
+            "entry_date": "2026-11-19 16:41",
+            "exit_date": "2026-11-25 11:57",
+            "entry_price": 304.6,
+            "exit_price": 272.45,
+            "ret_pct": -10.704826001313208,
+            "pnl": -16057.239001969812,
             "reason": "Trailing Stop (-10%)"
         }
     ]
