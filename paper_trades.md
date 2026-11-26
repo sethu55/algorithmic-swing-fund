@@ -6,7 +6,7 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 925,450.47** |
+| **Current Portfolio Value** | **INR 922,956.37** |
 | **Available Cash** | INR 1,751.34 |
 | **Total Realized P&L** | INR -98,248.66 (-9.82%) |
 | **Win Rate** | 20.0% (30 Trades) |
@@ -14,12 +14,12 @@
 ## Active Positions
 | Date | Company | Entry Price | Target (+25%) | Trailing Stop (-10%) | Current Price | Unrealized P&L |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-10-08 08:55 | **L&T (Main)** | INR 3626.10 | INR 4532.62 | INR 3802.86 | INR 4132.10 | 13.95% |
-| 2026-10-22 04:46 | **NTPC (Main)** | INR 300.40 | INR 375.50 | INR 298.08 | INR 320.25 | 6.61% |
-| 2026-11-07 09:41 | **Thermax (Ancillary)** | INR 2746.30 | INR 3432.88 | INR 2555.82 | INR 2675.80 | -2.57% |
-| 2026-11-19 07:18 | **BHEL (Main)** | INR 430.25 | INR 537.81 | INR 391.50 | INR 418.95 | -2.63% |
-| 2026-11-23 11:49 | **Graphite India (Ancillary)** | INR 789.90 | INR 987.38 | INR 715.01 | INR 791.75 | 0.23% |
-| 2026-11-25 11:57 | **Kaynes Technology** | INR 2698.00 | INR 3372.50 | INR 2528.10 | INR 2703.30 | 0.20% |
+| 2026-10-08 08:55 | **L&T (Main)** | INR 3626.10 | INR 4532.62 | INR 3802.86 | INR 4156.00 | 14.61% |
+| 2026-10-22 04:46 | **NTPC (Main)** | INR 300.40 | INR 375.50 | INR 298.08 | INR 318.00 | 5.86% |
+| 2026-11-07 09:41 | **Thermax (Ancillary)** | INR 2746.30 | INR 3432.88 | INR 2555.82 | INR 2663.40 | -3.02% |
+| 2026-11-19 07:18 | **BHEL (Main)** | INR 430.25 | INR 537.81 | INR 391.50 | INR 413.50 | -3.89% |
+| 2026-11-23 11:49 | **Graphite India (Ancillary)** | INR 789.90 | INR 987.38 | INR 715.01 | INR 794.45 | 0.58% |
+| 2026-11-25 11:57 | **Kaynes Technology** | INR 2698.00 | INR 3372.50 | INR 2528.10 | INR 2698.00 | 0.00% |
 
 ## Closed Trade History
 | Entry | Exit | Company | Entry Price | Exit Price | Return % | Realized P&L | Reason |
