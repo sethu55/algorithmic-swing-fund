@@ -6,7 +6,7 @@
 | Metric | Value |
 | :--- | :--- |
 | **Starting Balance** | INR 1,000,000.00 |
-| **Current Portfolio Value** | **INR 926,476.90** |
+| **Current Portfolio Value** | **INR 929,064.16** |
 | **Available Cash** | INR 1,751.34 |
 | **Total Realized P&L** | INR -98,248.66 (-9.82%) |
 | **Win Rate** | 20.0% (30 Trades) |
@@ -16,9 +16,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 2026-10-08 08:55 | **L&T (Main)** | INR 3626.10 | INR 4532.62 | INR 3802.86 | INR 4108.50 | 13.30% |
 | 2026-10-22 04:46 | **NTPC (Main)** | INR 300.40 | INR 375.50 | INR 298.08 | INR 319.75 | 6.44% |
-| 2026-11-07 09:41 | **Thermax (Ancillary)** | INR 2746.30 | INR 3432.88 | INR 2555.82 | INR 2675.80 | -2.57% |
+| 2026-11-07 09:41 | **Thermax (Ancillary)** | INR 2746.30 | INR 3432.88 | INR 2555.82 | INR 2722.30 | -0.87% |
 | 2026-11-19 07:18 | **BHEL (Main)** | INR 430.25 | INR 537.81 | INR 391.50 | INR 421.95 | -1.93% |
-| 2026-11-23 11:49 | **Graphite India (Ancillary)** | INR 789.90 | INR 987.38 | INR 716.40 | INR 791.75 | 0.23% |
+| 2026-11-23 11:49 | **Graphite India (Ancillary)** | INR 789.90 | INR 987.38 | INR 716.40 | INR 792.00 | 0.27% |
 | 2026-11-25 11:57 | **Kaynes Technology** | INR 2698.00 | INR 3372.50 | INR 2528.10 | INR 2725.00 | 1.00% |
 
 ## Closed Trade History
